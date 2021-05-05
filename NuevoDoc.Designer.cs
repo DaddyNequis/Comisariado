@@ -305,6 +305,7 @@ namespace Sistema_Oaxaca
             this.InicioNuev.TabIndex = 15;
             this.InicioNuev.Text = "Inicio";
             this.InicioNuev.UseVisualStyleBackColor = false;
+            this.InicioNuev.Click += new System.EventHandler(this.InicioNuev_Click);
             // 
             // NuevoDoc
             // 

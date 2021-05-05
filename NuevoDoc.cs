@@ -113,5 +113,11 @@ namespace Sistema_Oaxaca
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void InicioNuev_Click(object sender, EventArgs e)
+        {
+            Home.ActiveForm.Show();
+            NuevoDoc.ActiveForm.Close();
+        }
     }
 }
