@@ -63,6 +63,16 @@ namespace Sistema_Oaxaca.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Constancia {
+            get {
+                object obj = ResourceManager.GetObject("Constancia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cuadrito {
             get {
                 object obj = ResourceManager.GetObject("Cuadrito", resourceCulture);

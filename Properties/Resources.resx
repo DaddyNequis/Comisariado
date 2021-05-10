@@ -118,19 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Cuadrito" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cuadrito.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Modificar_Documento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modificar Documento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Libreria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Libreria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="New_Document" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Mediciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mediciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Modificar_Documento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Modificar Documento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cuadrito" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cuadrito.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="New_Document" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New Document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Constancia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Constancia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

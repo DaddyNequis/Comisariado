@@ -32,6 +32,14 @@ namespace Sistema_Oaxaca
             this.Cuadrito2 = new System.Windows.Forms.PictureBox();
             this.TabModificarDoc = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ActualFechaSelecDoc = new System.Windows.Forms.TextBox();
+            this.ActualBenefSelecDoc = new System.Windows.Forms.TextBox();
+            this.ActualCedenteSelDoc = new System.Windows.Forms.TextBox();
+            this.SolarOTerrSecDoc = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,14 +60,6 @@ namespace Sistema_Oaxaca
             this.CedenteAct = new System.Windows.Forms.TextBox();
             this.Label = new System.Windows.Forms.Label();
             this.InicioMod = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.SolarOTerrSecDoc = new System.Windows.Forms.ComboBox();
-            this.ActualCedenteSelDoc = new System.Windows.Forms.TextBox();
-            this.ActualBenefSelecDoc = new System.Windows.Forms.TextBox();
-            this.ActualFechaSelecDoc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Cuadrito2)).BeginInit();
             this.TabModificarDoc.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -109,6 +109,80 @@ namespace Sistema_Oaxaca
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Seleccionar";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ActualFechaSelecDoc
+            // 
+            this.ActualFechaSelecDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualFechaSelecDoc.Location = new System.Drawing.Point(267, 280);
+            this.ActualFechaSelecDoc.Name = "ActualFechaSelecDoc";
+            this.ActualFechaSelecDoc.Size = new System.Drawing.Size(226, 28);
+            this.ActualFechaSelecDoc.TabIndex = 10;
+            // 
+            // ActualBenefSelecDoc
+            // 
+            this.ActualBenefSelecDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualBenefSelecDoc.Location = new System.Drawing.Point(267, 230);
+            this.ActualBenefSelecDoc.Name = "ActualBenefSelecDoc";
+            this.ActualBenefSelecDoc.Size = new System.Drawing.Size(226, 28);
+            this.ActualBenefSelecDoc.TabIndex = 9;
+            // 
+            // ActualCedenteSelDoc
+            // 
+            this.ActualCedenteSelDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualCedenteSelDoc.Location = new System.Drawing.Point(267, 178);
+            this.ActualCedenteSelDoc.Name = "ActualCedenteSelDoc";
+            this.ActualCedenteSelDoc.Size = new System.Drawing.Size(226, 28);
+            this.ActualCedenteSelDoc.TabIndex = 8;
+            // 
+            // SolarOTerrSecDoc
+            // 
+            this.SolarOTerrSecDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SolarOTerrSecDoc.FormattingEnabled = true;
+            this.SolarOTerrSecDoc.Location = new System.Drawing.Point(267, 123);
+            this.SolarOTerrSecDoc.Name = "SolarOTerrSecDoc";
+            this.SolarOTerrSecDoc.Size = new System.Drawing.Size(226, 30);
+            this.SolarOTerrSecDoc.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(62, 123);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(154, 25);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Solar o Terreno:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(62, 281);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(133, 25);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Actual Fecha:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(62, 174);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 25);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Actual Cedente:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(62, 226);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(179, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Actual Beneficiario:";
             // 
             // button1
             // 
@@ -320,80 +394,7 @@ namespace Sistema_Oaxaca
             this.InicioMod.TabIndex = 14;
             this.InicioMod.Text = "Inicio";
             this.InicioMod.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Actual Beneficiario:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(62, 174);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 25);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Actual Cedente:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(62, 281);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 25);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Actual Fecha:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(62, 123);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 25);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Solar o Terreno:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // SolarOTerrSecDoc
-            // 
-            this.SolarOTerrSecDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SolarOTerrSecDoc.FormattingEnabled = true;
-            this.SolarOTerrSecDoc.Location = new System.Drawing.Point(267, 123);
-            this.SolarOTerrSecDoc.Name = "SolarOTerrSecDoc";
-            this.SolarOTerrSecDoc.Size = new System.Drawing.Size(226, 30);
-            this.SolarOTerrSecDoc.TabIndex = 7;
-            // 
-            // ActualCedenteSelDoc
-            // 
-            this.ActualCedenteSelDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualCedenteSelDoc.Location = new System.Drawing.Point(267, 178);
-            this.ActualCedenteSelDoc.Name = "ActualCedenteSelDoc";
-            this.ActualCedenteSelDoc.Size = new System.Drawing.Size(226, 28);
-            this.ActualCedenteSelDoc.TabIndex = 8;
-            // 
-            // ActualBenefSelecDoc
-            // 
-            this.ActualBenefSelecDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualBenefSelecDoc.Location = new System.Drawing.Point(267, 230);
-            this.ActualBenefSelecDoc.Name = "ActualBenefSelecDoc";
-            this.ActualBenefSelecDoc.Size = new System.Drawing.Size(226, 28);
-            this.ActualBenefSelecDoc.TabIndex = 9;
-            // 
-            // ActualFechaSelecDoc
-            // 
-            this.ActualFechaSelecDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualFechaSelecDoc.Location = new System.Drawing.Point(267, 280);
-            this.ActualFechaSelecDoc.Name = "ActualFechaSelecDoc";
-            this.ActualFechaSelecDoc.Size = new System.Drawing.Size(226, 28);
-            this.ActualFechaSelecDoc.TabIndex = 10;
+            this.InicioMod.Click += new System.EventHandler(this.InicioMod_Click);
             // 
             // ModificarDoc
             // 

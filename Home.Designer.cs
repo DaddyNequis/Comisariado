@@ -30,51 +30,64 @@ namespace Sistema_Oaxaca
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Constanciaspng = new System.Windows.Forms.PictureBox();
+            this.LibreriaDocPng = new System.Windows.Forms.PictureBox();
+            this.Medicionespng = new System.Windows.Forms.PictureBox();
+            this.ModificarDocpng = new System.Windows.Forms.PictureBox();
             this.NuevoDoc = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LibreriaDocPng)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Medicionespng)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ModificarDocpng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuevoDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox3
+            // Constanciaspng
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Sistema_Oaxaca.Properties.Resources.Libreria;
-            this.pictureBox3.Location = new System.Drawing.Point(1151, 241);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.Constanciaspng.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Constanciaspng.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia;
+            this.Constanciaspng.Location = new System.Drawing.Point(1154, 530);
+            this.Constanciaspng.Name = "Constanciaspng";
+            this.Constanciaspng.Size = new System.Drawing.Size(197, 193);
+            this.Constanciaspng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Constanciaspng.TabIndex = 6;
+            this.Constanciaspng.TabStop = false;
             // 
-            // pictureBox2
+            // LibreriaDocPng
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Sistema_Oaxaca.Properties.Resources.Mediciones;
-            this.pictureBox2.Location = new System.Drawing.Point(700, 530);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(197, 193);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.LibreriaDocPng.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LibreriaDocPng.Image = global::Sistema_Oaxaca.Properties.Resources.Libreria;
+            this.LibreriaDocPng.Location = new System.Drawing.Point(1151, 241);
+            this.LibreriaDocPng.Name = "LibreriaDocPng";
+            this.LibreriaDocPng.Size = new System.Drawing.Size(200, 200);
+            this.LibreriaDocPng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LibreriaDocPng.TabIndex = 3;
+            this.LibreriaDocPng.TabStop = false;
             // 
-            // pictureBox1
+            // Medicionespng
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Sistema_Oaxaca.Properties.Resources.Modificar_Documento;
-            this.pictureBox1.Location = new System.Drawing.Point(700, 249);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.Medicionespng.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Medicionespng.Image = global::Sistema_Oaxaca.Properties.Resources.Mediciones;
+            this.Medicionespng.Location = new System.Drawing.Point(250, 530);
+            this.Medicionespng.Name = "Medicionespng";
+            this.Medicionespng.Size = new System.Drawing.Size(197, 193);
+            this.Medicionespng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Medicionespng.TabIndex = 2;
+            this.Medicionespng.TabStop = false;
+            // 
+            // ModificarDocpng
+            // 
+            this.ModificarDocpng.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ModificarDocpng.Image = global::Sistema_Oaxaca.Properties.Resources.Modificar_Documento;
+            this.ModificarDocpng.Location = new System.Drawing.Point(700, 249);
+            this.ModificarDocpng.Name = "ModificarDocpng";
+            this.ModificarDocpng.Size = new System.Drawing.Size(200, 200);
+            this.ModificarDocpng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ModificarDocpng.TabIndex = 1;
+            this.ModificarDocpng.TabStop = false;
+            this.ModificarDocpng.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // NuevoDoc
             // 
@@ -104,9 +117,10 @@ namespace Sistema_Oaxaca
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1582, 1055);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Constanciaspng);
+            this.Controls.Add(this.LibreriaDocPng);
+            this.Controls.Add(this.Medicionespng);
+            this.Controls.Add(this.ModificarDocpng);
             this.Controls.Add(this.NuevoDoc);
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -115,9 +129,10 @@ namespace Sistema_Oaxaca
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LibreriaDocPng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Medicionespng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ModificarDocpng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuevoDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -125,11 +140,12 @@ namespace Sistema_Oaxaca
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox ModificarDocpng;
+        private System.Windows.Forms.PictureBox Medicionespng;
+        private System.Windows.Forms.PictureBox LibreriaDocPng;
         private System.Windows.Forms.PictureBox NuevoDoc;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox Constanciaspng;
     }
 }
 
