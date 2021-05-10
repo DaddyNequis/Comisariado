@@ -54,6 +54,7 @@ namespace Sistema_Oaxaca
             this.Constanciaspng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Constanciaspng.TabIndex = 6;
             this.Constanciaspng.TabStop = false;
+            this.Constanciaspng.Click += new System.EventHandler(this.Constanciaspng_Click);
             // 
             // LibreriaDocPng
             // 

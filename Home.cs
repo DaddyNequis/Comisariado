@@ -38,5 +38,12 @@ namespace Sistema_Oaxaca
             ModificarDoc VentanaModificarDoc = new ModificarDoc();
             VentanaModificarDoc.ShowDialog();
         }
+
+        private void Constanciaspng_Click(object sender, EventArgs e)
+        {
+            ConstanciaDoc VentanaConstanciaDoc = new ConstanciaDoc();
+            VentanaConstanciaDoc.ShowDialog();
+
+        }
     }
 }
