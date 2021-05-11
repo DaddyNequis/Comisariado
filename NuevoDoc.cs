@@ -54,23 +54,23 @@ namespace Sistema_Oaxaca
         private void NuevoDoc_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-                var deviceManager = new DeviceManager ();
+            //try
+            //{
+            //    var deviceManager = new DeviceManager ();
 
-                for (int i=1; i <= deviceManager.DeviceInfos.Count; i++) //Lista de Dispositivos
-                {
-                    if(deviceManager.DeviceInfos[i].Type!=WiaDeviceType.ScannerDeviceType) //Saltar si no es escaner
-                    {
-                        continue;
-                    }
-                    ListaDisp.Items.Add(deviceManager.DeviceInfos[i].Properties["Nombre"].get_Value());
-                }
-            }
-            catch (COMException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //    for (int i=1; i <= deviceManager.DeviceInfos.Count; i++) //Lista de Dispositivos
+            //    {
+            //        if(deviceManager.DeviceInfos[i].Type!=WiaDeviceType.ScannerDeviceType) //Saltar si no es escaner
+            //        {
+            //            continue;
+            //        }
+            //        ListaDisp.Items.Add(deviceManager.DeviceInfos[i].Properties["Nombre"].get_Value());
+            //    }
+            //}
+            //catch (COMException ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
 
         }
 
@@ -118,6 +118,34 @@ namespace Sistema_Oaxaca
         {
             Home.ActiveForm.Show();
             NuevoDoc.ActiveForm.Close();
+        }
+
+        private void FinNuevoDoc_Click(object sender, EventArgs e)
+        {
+            
+         
+
+        }
+
+        private void NuevoDoc_Load_1(object sender, EventArgs e)
+        {
+            try
+            {
+                var deviceManager = new DeviceManager();
+
+                for (int i = 1; i <= deviceManager.DeviceInfos.Count; i++) //Lista de Dispositivos
+                {
+                    if (deviceManager.DeviceInfos[i].Type != WiaDeviceType.ScannerDeviceType) //Saltar si no es escaner
+                    {
+                        continue;
+                    }
+                    ListaDisp.Items.Add(deviceManager.DeviceInfos[i].Properties["Name"].get_Value());
+                }
+            }
+            catch (COMException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
