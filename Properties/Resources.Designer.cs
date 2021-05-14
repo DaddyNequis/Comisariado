@@ -73,6 +73,66 @@ namespace Sistema_Oaxaca.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Constancia_Cultivo {
+            get {
+                object obj = ResourceManager.GetObject("Constancia_Cultivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Constancia_Jornalero {
+            get {
+                object obj = ResourceManager.GetObject("Constancia_Jornalero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Constancia_Pastoreo {
+            get {
+                object obj = ResourceManager.GetObject("Constancia_Pastoreo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Constancia_Solar {
+            get {
+                object obj = ResourceManager.GetObject("Constancia_Solar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Constancia_Uso_Suelo {
+            get {
+                object obj = ResourceManager.GetObject("Constancia_Uso_Suelo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Contrato_Arrendamiento {
+            get {
+                object obj = ResourceManager.GetObject("Contrato_Arrendamiento", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cuadrito {
             get {
                 object obj = ResourceManager.GetObject("Cuadrito", resourceCulture);

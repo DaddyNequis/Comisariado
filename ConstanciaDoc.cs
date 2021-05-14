@@ -16,5 +16,16 @@ namespace Sistema_Oaxaca
         {
             InitializeComponent();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InicioMod_Click(object sender, EventArgs e)
+        {
+            Home.ActiveForm.Show();
+            ConstanciaDoc.ActiveForm.Close();
+        }
     }
 }

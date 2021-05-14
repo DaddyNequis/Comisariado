@@ -137,6 +137,12 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Contrato Arrendamiento.png" />
+    <None Include="Resources\Constancia Cultivo.png" />
+    <None Include="Resources\Constancia Jornalero.png" />
+    <None Include="Resources\Constancia Pastoreo.png" />
+    <None Include="Resources\Constancia Solar.png" />
+    <None Include="Resources\Constancia Uso Suelo.png" />
     <Content Include="Resources\Constancia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

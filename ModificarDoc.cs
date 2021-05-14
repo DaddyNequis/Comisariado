@@ -35,7 +35,7 @@ namespace Sistema_Oaxaca
         private void InicioMod_Click(object sender, EventArgs e)
         {
             Home.ActiveForm.Show();
-            NuevoDoc.ActiveForm.Close();
+            ModificarDoc.ActiveForm.Close();
         }
     }
 }

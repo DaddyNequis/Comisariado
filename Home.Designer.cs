@@ -48,9 +48,9 @@ namespace Sistema_Oaxaca
             // 
             this.Constanciaspng.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Constanciaspng.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia;
-            this.Constanciaspng.Location = new System.Drawing.Point(1154, 530);
+            this.Constanciaspng.Location = new System.Drawing.Point(250, 523);
             this.Constanciaspng.Name = "Constanciaspng";
-            this.Constanciaspng.Size = new System.Drawing.Size(197, 193);
+            this.Constanciaspng.Size = new System.Drawing.Size(200, 200);
             this.Constanciaspng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Constanciaspng.TabIndex = 6;
             this.Constanciaspng.TabStop = false;
@@ -60,7 +60,7 @@ namespace Sistema_Oaxaca
             // 
             this.LibreriaDocPng.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LibreriaDocPng.Image = global::Sistema_Oaxaca.Properties.Resources.Libreria;
-            this.LibreriaDocPng.Location = new System.Drawing.Point(1151, 241);
+            this.LibreriaDocPng.Location = new System.Drawing.Point(711, 247);
             this.LibreriaDocPng.Name = "LibreriaDocPng";
             this.LibreriaDocPng.Size = new System.Drawing.Size(200, 200);
             this.LibreriaDocPng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +71,7 @@ namespace Sistema_Oaxaca
             // 
             this.Medicionespng.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Medicionespng.Image = global::Sistema_Oaxaca.Properties.Resources.Mediciones;
-            this.Medicionespng.Location = new System.Drawing.Point(250, 530);
+            this.Medicionespng.Location = new System.Drawing.Point(1154, 530);
             this.Medicionespng.Name = "Medicionespng";
             this.Medicionespng.Size = new System.Drawing.Size(197, 193);
             this.Medicionespng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,9 +82,9 @@ namespace Sistema_Oaxaca
             // 
             this.ModificarDocpng.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ModificarDocpng.Image = global::Sistema_Oaxaca.Properties.Resources.Modificar_Documento;
-            this.ModificarDocpng.Location = new System.Drawing.Point(700, 249);
+            this.ModificarDocpng.Location = new System.Drawing.Point(1154, 251);
             this.ModificarDocpng.Name = "ModificarDocpng";
-            this.ModificarDocpng.Size = new System.Drawing.Size(200, 200);
+            this.ModificarDocpng.Size = new System.Drawing.Size(190, 190);
             this.ModificarDocpng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ModificarDocpng.TabIndex = 1;
             this.ModificarDocpng.TabStop = false;

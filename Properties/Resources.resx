@@ -136,4 +136,22 @@
   <data name="Constancia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Constancia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Constancia_Cultivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Constancia Cultivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Constancia_Jornalero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Constancia Jornalero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Constancia_Pastoreo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Constancia Pastoreo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Constancia_Solar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Constancia Solar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Constancia_Uso_Suelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Constancia Uso Suelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contrato_Arrendamiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contrato Arrendamiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
