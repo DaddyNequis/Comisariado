@@ -139,7 +139,10 @@ namespace Sistema_Oaxaca
                     {
                         continue;
                     }
-                    ListaDisp.Items.Add(deviceManager.DeviceInfos[i].Properties["Name"].get_Value());
+                    comboBox1.Items.Add(deviceManager.DeviceInfos[i].Properties["Name"].get_Value());
+               //     comboBox1.Items.Add(deviceManager.DeviceInfos[i].Properties["Nombre"].get_Value());
+
+                 //   textBox2.Text = deviceManager.DeviceInfos[i].Properties.;
                 }
             }
             catch (COMException ex)
