@@ -43,22 +43,26 @@ namespace Sistema_Oaxaca
             this.NombreCedente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.FinNuevoDoc = new System.Windows.Forms.Button();
             this.Escanear = new System.Windows.Forms.Button();
-            this.ImagenEscaneada = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.ImagenEscaneada = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.TabNuevoDoc.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenEscaneada)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenEscaneada)).BeginInit();
             this.SuspendLayout();
             // 
             // TabNuevoDoc
@@ -74,6 +78,10 @@ namespace Sistema_Oaxaca
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.listBox2);
+            this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.monthCalendar1);
             this.tabPage1.Controls.Add(this.NextDocNuevo);
             this.tabPage1.Controls.Add(this.Colonias);
@@ -96,7 +104,7 @@ namespace Sistema_Oaxaca
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(162, 238);
+            this.monthCalendar1.Location = new System.Drawing.Point(29, 225);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 11;
@@ -106,7 +114,7 @@ namespace Sistema_Oaxaca
             this.NextDocNuevo.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.NextDocNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NextDocNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextDocNuevo.Location = new System.Drawing.Point(691, 262);
+            this.NextDocNuevo.Location = new System.Drawing.Point(863, 387);
             this.NextDocNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.NextDocNuevo.Name = "NextDocNuevo";
             this.NextDocNuevo.Size = new System.Drawing.Size(106, 56);
@@ -119,17 +127,17 @@ namespace Sistema_Oaxaca
             // 
             this.Colonias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Colonias.FormattingEnabled = true;
-            this.Colonias.Location = new System.Drawing.Point(614, 149);
+            this.Colonias.Location = new System.Drawing.Point(562, 144);
             this.Colonias.Margin = new System.Windows.Forms.Padding(2);
             this.Colonias.Name = "Colonias";
-            this.Colonias.Size = new System.Drawing.Size(184, 25);
+            this.Colonias.Size = new System.Drawing.Size(407, 25);
             this.Colonias.TabIndex = 9;
             // 
             // SolarTerreno
             // 
             this.SolarTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SolarTerreno.FormattingEnabled = true;
-            this.SolarTerreno.Location = new System.Drawing.Point(614, 81);
+            this.SolarTerreno.Location = new System.Drawing.Point(562, 43);
             this.SolarTerreno.Margin = new System.Windows.Forms.Padding(2);
             this.SolarTerreno.Name = "SolarTerreno";
             this.SolarTerreno.Size = new System.Drawing.Size(184, 25);
@@ -139,7 +147,7 @@ namespace Sistema_Oaxaca
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(481, 81);
+            this.label4.Location = new System.Drawing.Point(558, 22);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 20);
@@ -150,7 +158,7 @@ namespace Sistema_Oaxaca
             // 
             this.labelParajeColonia.AutoSize = true;
             this.labelParajeColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParajeColonia.Location = new System.Drawing.Point(481, 150);
+            this.labelParajeColonia.Location = new System.Drawing.Point(558, 122);
             this.labelParajeColonia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelParajeColonia.Name = "labelParajeColonia";
             this.labelParajeColonia.Size = new System.Drawing.Size(58, 20);
@@ -161,7 +169,7 @@ namespace Sistema_Oaxaca
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 220);
+            this.label2.Location = new System.Drawing.Point(25, 204);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 20);
@@ -171,7 +179,7 @@ namespace Sistema_Oaxaca
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(162, 150);
+            this.textBox1.Location = new System.Drawing.Point(310, 44);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(198, 24);
@@ -181,7 +189,7 @@ namespace Sistema_Oaxaca
             // 
             this.Beneficiario.AutoSize = true;
             this.Beneficiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Beneficiario.Location = new System.Drawing.Point(68, 150);
+            this.Beneficiario.Location = new System.Drawing.Point(306, 22);
             this.Beneficiario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Beneficiario.Name = "Beneficiario";
             this.Beneficiario.Size = new System.Drawing.Size(96, 20);
@@ -191,7 +199,7 @@ namespace Sistema_Oaxaca
             // NombreCedente
             // 
             this.NombreCedente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreCedente.Location = new System.Drawing.Point(162, 80);
+            this.NombreCedente.Location = new System.Drawing.Point(29, 44);
             this.NombreCedente.Margin = new System.Windows.Forms.Padding(2);
             this.NombreCedente.Name = "NombreCedente";
             this.NombreCedente.Size = new System.Drawing.Size(198, 24);
@@ -201,12 +209,12 @@ namespace Sistema_Oaxaca
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 81);
+            this.label1.Location = new System.Drawing.Point(25, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cedente:";
+            this.label1.Text = "Cedentes:";
             // 
             // tabPage2
             // 
@@ -227,11 +235,40 @@ namespace Sistema_Oaxaca
             this.tabPage2.Text = "Escanear";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(275, 79);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 20);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Documentos Escaneados:";
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(279, 102);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(694, 300);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(18, 34);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(336, 28);
+            this.comboBox1.TabIndex = 1;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 11);
+            this.label5.Location = new System.Drawing.Point(15, 13);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 18);
@@ -281,46 +318,6 @@ namespace Sistema_Oaxaca
             this.Escanear.UseVisualStyleBackColor = false;
             this.Escanear.Click += new System.EventHandler(this.Escanear_Click);
             // 
-            // ImagenEscaneada
-            // 
-            this.ImagenEscaneada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ImagenEscaneada.Location = new System.Drawing.Point(18, 102);
-            this.ImagenEscaneada.Margin = new System.Windows.Forms.Padding(2);
-            this.ImagenEscaneada.Name = "ImagenEscaneada";
-            this.ImagenEscaneada.Size = new System.Drawing.Size(237, 301);
-            this.ImagenEscaneada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImagenEscaneada.TabIndex = 1;
-            this.ImagenEscaneada.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(336, 28);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(279, 102);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(694, 300);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(275, 79);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Documentos Escaneados:";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
@@ -331,6 +328,7 @@ namespace Sistema_Oaxaca
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1051, 74);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label7
             // 
@@ -354,6 +352,53 @@ namespace Sistema_Oaxaca
             this.label8.TabIndex = 0;
             this.label8.Text = "Comisariado Huaxpaltepec, Oax";
             // 
+            // ImagenEscaneada
+            // 
+            this.ImagenEscaneada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ImagenEscaneada.Location = new System.Drawing.Point(18, 102);
+            this.ImagenEscaneada.Margin = new System.Windows.Forms.Padding(2);
+            this.ImagenEscaneada.Name = "ImagenEscaneada";
+            this.ImagenEscaneada.Size = new System.Drawing.Size(237, 301);
+            this.ImagenEscaneada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagenEscaneada.TabIndex = 1;
+            this.ImagenEscaneada.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(29, 74);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(198, 95);
+            this.listBox1.TabIndex = 12;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(310, 74);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(198, 95);
+            this.listBox2.TabIndex = 13;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(771, 44);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(198, 24);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(767, 22);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 20);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Hectareas:";
+            // 
             // NuevoDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,9 +418,9 @@ namespace Sistema_Oaxaca
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenEscaneada)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenEscaneada)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,5 +451,9 @@ namespace Sistema_Oaxaca
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

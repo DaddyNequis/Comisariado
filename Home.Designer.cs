@@ -30,21 +30,54 @@ namespace Sistema_Oaxaca
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Constanciaspng = new System.Windows.Forms.PictureBox();
             this.LibreriaDocPng = new System.Windows.Forms.PictureBox();
             this.Medicionespng = new System.Windows.Forms.PictureBox();
             this.ModificarDocpng = new System.Windows.Forms.PictureBox();
             this.NuevoDoc = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LibreriaDocPng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Medicionespng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModificarDocpng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuevoDoc)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(812, 74);
+            this.panel1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(361, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Inicio";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(176, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(465, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Comisariado Huaxpaltepec, Oax";
             // 
             // Constanciaspng
             // 
@@ -70,6 +103,7 @@ namespace Sistema_Oaxaca
             this.LibreriaDocPng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LibreriaDocPng.TabIndex = 3;
             this.LibreriaDocPng.TabStop = false;
+            this.LibreriaDocPng.Click += new System.EventHandler(this.LibreriaDocPng_Click);
             // 
             // Medicionespng
             // 
@@ -109,39 +143,6 @@ namespace Sistema_Oaxaca
             this.NuevoDoc.TabStop = false;
             this.NuevoDoc.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 74);
-            this.panel1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(176, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(465, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Comisariado Huaxpaltepec, Oax";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(361, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Inicio";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,19 +156,19 @@ namespace Sistema_Oaxaca
             this.Controls.Add(this.ModificarDocpng);
             this.Controls.Add(this.NuevoDoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Home_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LibreriaDocPng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Medicionespng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ModificarDocpng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuevoDoc)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

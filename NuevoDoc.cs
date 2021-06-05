@@ -11,6 +11,7 @@ using System.IO;
 using WIA;
 using System.Runtime.InteropServices;
 
+
 namespace Sistema_Oaxaca
 {
     public partial class NuevoDoc : Form
@@ -56,11 +57,11 @@ namespace Sistema_Oaxaca
 
             //try
             //{
-            //    var deviceManager = new DeviceManager ();
+            //    var deviceManager = new DeviceManager();
 
-            //    for (int i=1; i <= deviceManager.DeviceInfos.Count; i++) //Lista de Dispositivos
+            //    for (int i = 1; i <= deviceManager.DeviceInfos.Count; i++) //Lista de Dispositivos
             //    {
-            //        if(deviceManager.DeviceInfos[i].Type!=WiaDeviceType.ScannerDeviceType) //Saltar si no es escaner
+            //        if (deviceManager.DeviceInfos[i].Type != WiaDeviceType.ScannerDeviceType) //Saltar si no es escaner
             //        {
             //            continue;
             //        }
@@ -149,6 +150,11 @@ namespace Sistema_Oaxaca
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
