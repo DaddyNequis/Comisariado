@@ -36,6 +36,9 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconooax_63X_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -199,6 +202,7 @@
     <None Include="Resources\Constancia Pastoreo.png" />
     <None Include="Resources\Constancia Solar.png" />
     <None Include="Resources\Constancia Uso Suelo.png" />
+    <Content Include="iconooax_63X_icon.ico" />
     <Content Include="Resources\Constancia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
