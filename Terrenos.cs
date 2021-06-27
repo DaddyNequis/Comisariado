@@ -8,7 +8,7 @@ namespace Sistema_Oaxaca
 {
     class Terrenos
     {
-        public Int16 DID { get; set; }
+        public int DocumentID { get; set; }
         public String Tipo { get; set; }
         public String Fecha { get; set; }
         public List<String> Cedentes { get; set; }
@@ -18,7 +18,11 @@ namespace Sistema_Oaxaca
 
     }
 
-
+     class ListaTerrenos
+    {
+        public List<Terrenos> ListaTrerrenos { get; set; }
+        public int count { get; set; }
+    }
 
 
 }

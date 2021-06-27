@@ -10,34 +10,58 @@ using System.Windows.Forms;
 using System.IO;
 using WIA;
 using System.Runtime.InteropServices;
+using Newtonsoft.Json;
 
 
 namespace Sistema_Oaxaca
 {
     public partial class NuevoDoc : Form
     {
+        int NuevoId;
+        MasterAPI MAPI = new MasterAPI();
         public NuevoDoc()
         {
             InitializeComponent();
         }
-
+ 
         private void NextDocNuevo_Click(object sender, EventArgs e)
         {
+            NuevoId = MAPI.GetNewId();
+
             string Cedente = NombreCedente.Text;
             string Biblioteca = Application.StartupPath + @"\Biblioteca";
-            string CarpCedente = Application.StartupPath + @"\Biblioteca\ " + Cedente;
-
+            string CarpCedente = Application.StartupPath + @"\Biblioteca\ " + NuevoId;
+            string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
             try
             {
                 if(Directory.Exists(Biblioteca))
                 {
                     Directory.CreateDirectory(CarpCedente);
+                    Directory.CreateDirectory(CarpetaVersion);
                 }
                 else
                 {
                     Directory.CreateDirectory(Biblioteca);
                     Directory.CreateDirectory(CarpCedente);
+                    Directory.CreateDirectory(CarpetaVersion);
                 }
+                ObjTerreno terreno = new ObjTerreno();
+                VerTerreno version = new VerTerreno();
+                List <VerTerreno> versiones = new List<VerTerreno>();
+
+                terreno.DocumentID = NuevoId;
+                terreno.LastVersion = 1;
+                version.Cedentes = listBox1.Items.Cast<String>().ToList(); 
+                version.Beneficiarios = listBox2.Items.Cast<String>().ToList();
+                version.Fecha = monthCalendar1.ToString();
+                version.Hectareas = textBox2.Text;
+                version.Paraje = Colonias.Text;
+                version.VersionID = 1;
+                versiones.Add(version);
+                terreno.Versiones = versiones;
+                string result = JsonConvert.SerializeObject(terreno);
+                File.WriteAllText(CarpCedente + @"\terreno.json", result);
+                MAPI.RegistrarTerreno(version, terreno);
             }
 
             catch (Exception ex)
@@ -46,6 +70,8 @@ namespace Sistema_Oaxaca
             }
 
         }
+
+
 
         private void ListaDisp_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -78,6 +104,7 @@ namespace Sistema_Oaxaca
         private void Escanear_Click(object sender, EventArgs e)
         {
             string Cedente = NombreCedente.Text;
+            string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
             try
             {
                 var deviceManager = new DeviceManager();
@@ -101,8 +128,9 @@ namespace Sistema_Oaxaca
                 var ItemEscaner = dispositivo.Items[1]; // Seleccionar el escaner
 
                 var imgFile = (ImageFile)ItemEscaner.Transfer(FormatID.wiaFormatJPEG);  // Conseguir imagen JPG y guardarla en variable
-
-                var Ubicacion = Application.StartupPath + @"\Biblioteca\ " + Cedente + @"\ DOCUMENTO " + Cedente; // Guardar en la carpeta del nuevo cedente
+                
+                String filename = Directory.GetFiles(CarpetaVersion, "*", SearchOption.TopDirectoryOnly).Length.ToString();
+                var Ubicacion = CarpetaVersion + filename + @".jpg"; // Guardar en la carpeta del nuevo cedente
 
                 imgFile.SaveFile(Ubicacion);
 

@@ -34,13 +34,46 @@ namespace Sistema_Oaxaca
             yeah.Add(Terr);
             yeah.Add(Terr);
             yeah.Add(Terr);
+            ListaTerrenos lista = new ListaTerrenos();
+            lista.ListaTrerrenos = yeah;
+            lista.count = yeah.Count();
 
-            string  result = JsonConvert.SerializeObject(yeah);
+
+            string  result = JsonConvert.SerializeObject(lista);
 
             textBox1.Text = result;
 
 
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ObjTerreno Terr = new ObjTerreno();
+            VerTerreno Version = new VerTerreno();
+            List <VerTerreno> Versiones= new List<VerTerreno>();
+
+            Versiones.Add(Version);
+            Terr.Versiones = Versiones;
+
+
+            string result = JsonConvert.SerializeObject(Terr);
+
+            textBox1.Text = result;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Read the file as one string.
+            string text = System.IO.File.ReadAllText(@"Biblioteca\biblioteca.json");
+            ListaTerrenos lista;
+            lista = JsonConvert.DeserializeObject<ListaTerrenos>(text);
+            textBox1.Text = lista.count.ToString();
         }
     }
 }

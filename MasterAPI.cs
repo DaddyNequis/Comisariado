@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,13 +30,46 @@ namespace Sistema_Oaxaca
 
         public String DirBiblioteca = Application.StartupPath + @"\Biblioteca";
 
-        public Boolean NuevoDocumento()
+        public Boolean RegistrarTerreno(VerTerreno verterreno, ObjTerreno terreno)
         {
+           
+            string text = System.IO.File.ReadAllText(@"Biblioteca\biblioteca.json");
+            ListaTerrenos lista;
+            lista = JsonConvert.DeserializeObject<ListaTerrenos>(text);
+            List<Terrenos> terrenos = lista.ListaTrerrenos;
+            Terrenos lterreno = new Terrenos();
+            lterreno.Beneficiarios = verterreno.Beneficiarios;
+            lterreno.Tipo = verterreno.Tipo;
+            lterreno.Fecha = verterreno.Fecha;
+            lterreno.Cedentes = verterreno.Cedentes;
+            lterreno.Hectareas = verterreno.Hectareas;
+            lterreno.Paraje = verterreno.Paraje;
+            lterreno.DocumentID = terreno.DocumentID;
+            terrenos.Add(lterreno);
 
 
+             lista = new ListaTerrenos();
+            lista.ListaTrerrenos = terrenos;
+            lista.count = terrenos.Count();
+
+
+            string result = JsonConvert.SerializeObject(lista);
+            File.WriteAllText(DirBiblioteca + @"\biblioteca.json", result);
             return true;
         }
 
+
+
+
+        public int GetNewId()
+        {
+            int newid = 0;
+            string text = System.IO.File.ReadAllText(@"Biblioteca\biblioteca.json");
+            ListaTerrenos lista;
+            lista = JsonConvert.DeserializeObject<ListaTerrenos>(text);
+
+            return lista.count + 1;
+        }
 
 
          public  Boolean LoadDocuments()

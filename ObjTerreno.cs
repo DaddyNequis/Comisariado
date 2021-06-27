@@ -9,8 +9,8 @@ namespace Sistema_Oaxaca
     class ObjTerreno
     {
        
-        public Int16 DocumentID { get; set; }
-        public Int16 LastVersion { get; set; }
+        public int DocumentID { get; set; }
+        public int LastVersion { get; set; }
         public List<VerTerreno> Versiones { get; set; }
 
 
@@ -19,7 +19,7 @@ namespace Sistema_Oaxaca
 class VerTerreno
     {
 
-        public Int16 VersionID { get; set; }
+        public int VersionID { get; set; }
         public String Tipo { get; set; }
         public String Fecha { get; set; }
         public List<String> Cedentes { get; set; }
