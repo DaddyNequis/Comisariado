@@ -29,6 +29,7 @@ namespace Sistema_Oaxaca
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarDoc));
             this.Cuadrito2 = new System.Windows.Forms.PictureBox();
             this.TabModificarDoc = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -406,6 +407,7 @@ namespace Sistema_Oaxaca
             this.Controls.Add(this.TabModificarDoc);
             this.Controls.Add(this.Cuadrito2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ModificarDoc";
             this.Text = "ModificarDoc";
