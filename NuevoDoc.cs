@@ -17,13 +17,17 @@ namespace Sistema_Oaxaca
 {
     public partial class NuevoDoc : Form
     {
+        CargandoForm Cargando;
         int NuevoId;
         MasterAPI MAPI = new MasterAPI();
         public NuevoDoc()
         {
             InitializeComponent();
+            TabNuevoDoc.TabPages.Remove(EscanearTab);
+            SolarTerreno.Items.Add("Solar");
+            SolarTerreno.Items.Add("Terreno");
         }
- 
+
         private void NextDocNuevo_Click(object sender, EventArgs e)
         {
             NuevoId = MAPI.GetNewId();
@@ -34,7 +38,7 @@ namespace Sistema_Oaxaca
             string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
             try
             {
-                if(Directory.Exists(Biblioteca))
+                if (Directory.Exists(Biblioteca))
                 {
                     Directory.CreateDirectory(CarpCedente);
                     Directory.CreateDirectory(CarpetaVersion);
@@ -47,14 +51,14 @@ namespace Sistema_Oaxaca
                 }
                 ObjTerreno terreno = new ObjTerreno();
                 VerTerreno version = new VerTerreno();
-                List <VerTerreno> versiones = new List<VerTerreno>();
+                List<VerTerreno> versiones = new List<VerTerreno>();
 
                 terreno.DocumentID = NuevoId;
                 terreno.LastVersion = 1;
-                version.Cedentes = listBox1.Items.Cast<String>().ToList(); 
+                version.Cedentes = listBox1.Items.Cast<String>().ToList();
                 version.Beneficiarios = listBox2.Items.Cast<String>().ToList();
-                version.Fecha = monthCalendar1.ToString();
-                version.Hectareas = textBox2.Text;
+                version.Fecha = dateTimePicker1.ToString();
+                version.Hectareas = Hectareas.Text;
                 version.Paraje = Colonias.Text;
                 version.VersionID = 1;
                 versiones.Add(version);
@@ -62,6 +66,7 @@ namespace Sistema_Oaxaca
                 string result = JsonConvert.SerializeObject(terreno);
                 File.WriteAllText(CarpCedente + @"\terreno.json", result);
                 MAPI.RegistrarTerreno(version, terreno);
+
             }
 
             catch (Exception ex)
@@ -107,6 +112,9 @@ namespace Sistema_Oaxaca
             string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
             try
             {
+
+
+
                 var deviceManager = new DeviceManager();
 
                 DeviceInfo EscanerDisponible = null;
@@ -119,16 +127,18 @@ namespace Sistema_Oaxaca
                     }
 
                     EscanerDisponible = deviceManager.DeviceInfos[i];
-                    
+
                     break;
                 }
+
+                Show();
 
                 var dispositivo = EscanerDisponible.Connect(); // Conectarse al escaner disponible
 
                 var ItemEscaner = dispositivo.Items[1]; // Seleccionar el escaner
 
                 var imgFile = (ImageFile)ItemEscaner.Transfer(FormatID.wiaFormatJPEG);  // Conseguir imagen JPG y guardarla en variable
-                
+
                 String filename = Directory.GetFiles(CarpetaVersion, "*", SearchOption.TopDirectoryOnly).Length.ToString();
                 var Ubicacion = CarpetaVersion + filename + @".jpg"; // Guardar en la carpeta del nuevo cedente
 
@@ -136,8 +146,10 @@ namespace Sistema_Oaxaca
 
                 ImagenEscaneada.ImageLocation = Ubicacion;
 
+                Hide();
+
             }
-            catch(COMException ex)
+            catch (COMException ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -151,8 +163,8 @@ namespace Sistema_Oaxaca
 
         private void FinNuevoDoc_Click(object sender, EventArgs e)
         {
-            
-         
+
+
 
         }
 
@@ -169,9 +181,9 @@ namespace Sistema_Oaxaca
                         continue;
                     }
                     comboBox1.Items.Add(deviceManager.DeviceInfos[i].Properties["Name"].get_Value());
-               //     comboBox1.Items.Add(deviceManager.DeviceInfos[i].Properties["Nombre"].get_Value());
+                    //     comboBox1.Items.Add(deviceManager.DeviceInfos[i].Properties["Nombre"].get_Value());
 
-                 //   textBox2.Text = deviceManager.DeviceInfos[i].Properties.;
+                    //   textBox2.Text = deviceManager.DeviceInfos[i].Properties.;
                 }
             }
             catch (COMException ex)
@@ -183,6 +195,71 @@ namespace Sistema_Oaxaca
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (NombreCedente.Text == "" || NombreBeneficiario.Text == "" || SolarTerreno.Text == "" || Colonias.Text == "" || Hectareas.Text == "")
+                {
+                    MessageBox.Show("Llene todos los campos para continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else
+                {
+                    try
+                    {
+                        int temp = Convert.ToInt32(Hectareas.Text);
+                        TabNuevoDoc.TabPages.Remove(Registro);
+                        TabNuevoDoc.TabPages.Insert(0, EscanearTab);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Introduzca valor numerico en Hectareas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void NombreCedente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 250 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Introduzca solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void NombreBeneficiario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 250 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Introduzca solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void Colonias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Colonias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 250 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Introduzca solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
