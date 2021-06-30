@@ -33,7 +33,6 @@ namespace Sistema_Oaxaca
             this.TabNuevoDoc = new System.Windows.Forms.TabControl();
             this.Registro = new System.Windows.Forms.TabPage();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
             this.Hectareas = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -82,7 +81,6 @@ namespace Sistema_Oaxaca
             // Registro
             // 
             this.Registro.Controls.Add(this.dateTimePicker1);
-            this.Registro.Controls.Add(this.button2);
             this.Registro.Controls.Add(this.Hectareas);
             this.Registro.Controls.Add(this.label9);
             this.Registro.Controls.Add(this.listBox2);
@@ -112,16 +110,6 @@ namespace Sistema_Oaxaca
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 17;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1151, 443);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 41);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "SiguienteFake";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Hectareas
             // 
@@ -491,7 +479,6 @@ namespace Sistema_Oaxaca
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

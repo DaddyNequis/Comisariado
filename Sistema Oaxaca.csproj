@@ -229,9 +229,6 @@
     <None Include="Resources\Constancia Pastoreo.png" />
     <None Include="Resources\Constancia Solar.png" />
     <None Include="Resources\Constancia Uso Suelo.png" />
-    <Content Include="bin\Debug\cargando.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="cargando.gif" />
     <Content Include="iconooax_63X_icon.ico" />
     <Content Include="Resources\cargando.gif">

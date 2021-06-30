@@ -38,35 +38,55 @@ namespace Sistema_Oaxaca
             string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
             try
             {
-                if (Directory.Exists(Biblioteca))
+
+                if (NombreCedente.Text == "" || NombreBeneficiario.Text == "" || SolarTerreno.Text == "" || Colonias.Text == "" || Hectareas.Text == "")
                 {
-                    Directory.CreateDirectory(CarpCedente);
-                    Directory.CreateDirectory(CarpetaVersion);
+                    MessageBox.Show("Llene todos los campos para continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
                 else
                 {
-                    Directory.CreateDirectory(Biblioteca);
-                    Directory.CreateDirectory(CarpCedente);
-                    Directory.CreateDirectory(CarpetaVersion);
+                    try
+                    {
+                        int temp = Convert.ToInt32(Hectareas.Text);
+                        TabNuevoDoc.TabPages.Remove(Registro);
+                        TabNuevoDoc.TabPages.Insert(0, EscanearTab);
+
+                        if (Directory.Exists(Biblioteca))
+                        {
+                            Directory.CreateDirectory(CarpCedente);
+                            Directory.CreateDirectory(CarpetaVersion);
+                        }
+                        else
+                        {
+                            Directory.CreateDirectory(Biblioteca);
+                            Directory.CreateDirectory(CarpCedente);
+                            Directory.CreateDirectory(CarpetaVersion);
+                        }
+                        ObjTerreno terreno = new ObjTerreno();
+                        VerTerreno version = new VerTerreno();
+                        List<VerTerreno> versiones = new List<VerTerreno>();
+
+                        terreno.DocumentID = NuevoId;
+                        terreno.LastVersion = 1;
+                        version.Cedentes = listBox1.Items.Cast<String>().ToList();
+                        version.Beneficiarios = listBox2.Items.Cast<String>().ToList();
+                        version.Fecha = dateTimePicker1.ToString();
+                        version.Hectareas = Hectareas.Text;
+                        version.Paraje = Colonias.Text;
+                        version.VersionID = 1;
+                        versiones.Add(version);
+                        terreno.Versiones = versiones;
+                        string result = JsonConvert.SerializeObject(terreno);
+                        File.WriteAllText(CarpCedente + @"\terreno.json", result);
+                        MAPI.RegistrarTerreno(version, terreno);
+
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Introduzca valor numerico en Hectareas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }                    
                 }
-                ObjTerreno terreno = new ObjTerreno();
-                VerTerreno version = new VerTerreno();
-                List<VerTerreno> versiones = new List<VerTerreno>();
-
-                terreno.DocumentID = NuevoId;
-                terreno.LastVersion = 1;
-                version.Cedentes = listBox1.Items.Cast<String>().ToList();
-                version.Beneficiarios = listBox2.Items.Cast<String>().ToList();
-                version.Fecha = dateTimePicker1.ToString();
-                version.Hectareas = Hectareas.Text;
-                version.Paraje = Colonias.Text;
-                version.VersionID = 1;
-                versiones.Add(version);
-                terreno.Versiones = versiones;
-                string result = JsonConvert.SerializeObject(terreno);
-                File.WriteAllText(CarpCedente + @"\terreno.json", result);
-                MAPI.RegistrarTerreno(version, terreno);
-
             }
 
             catch (Exception ex)
@@ -195,36 +215,6 @@ namespace Sistema_Oaxaca
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (NombreCedente.Text == "" || NombreBeneficiario.Text == "" || SolarTerreno.Text == "" || Colonias.Text == "" || Hectareas.Text == "")
-                {
-                    MessageBox.Show("Llene todos los campos para continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                else
-                {
-                    try
-                    {
-                        int temp = Convert.ToInt32(Hectareas.Text);
-                        TabNuevoDoc.TabPages.Remove(Registro);
-                        TabNuevoDoc.TabPages.Insert(0, EscanearTab);
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Introduzca valor numerico en Hectareas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
 
         private void NombreCedente_KeyPress(object sender, KeyPressEventArgs e)
