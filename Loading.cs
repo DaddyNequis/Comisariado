@@ -19,7 +19,7 @@ namespace Sistema_Oaxaca
 
         private void Loading_Load(object sender, EventArgs e)
         {
-           
+            ControlBox = false;
         }
     }
 }

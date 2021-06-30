@@ -52,5 +52,23 @@ namespace Sistema_Oaxaca
            Libreria VentanaLibreria = new Libreria();
             VentanaLibreria.ShowDialog();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            NuevoDoc VentanaNuevoDoc = new NuevoDoc();
+            VentanaNuevoDoc.ShowDialog();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Libreria VentanaLibreria = new Libreria();
+            VentanaLibreria.ShowDialog();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            ConstanciaDoc VentanaConstanciaDoc = new ConstanciaDoc();
+            VentanaConstanciaDoc.ShowDialog();
+        }
     }
 }

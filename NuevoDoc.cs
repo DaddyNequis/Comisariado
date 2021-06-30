@@ -63,6 +63,7 @@ namespace Sistema_Oaxaca
                             Directory.CreateDirectory(CarpCedente);
                             Directory.CreateDirectory(CarpetaVersion);
                         }
+                        
                         ObjTerreno terreno = new ObjTerreno();
                         VerTerreno version = new VerTerreno();
                         List<VerTerreno> versiones = new List<VerTerreno>();
@@ -175,6 +176,18 @@ namespace Sistema_Oaxaca
             }
         }
 
+        private void Show() //Enseñar pantalla de cargando
+        {
+            CargandoForm VentanaLoading = new CargandoForm();
+            VentanaLoading.Show();
+        }
+
+        private void Hide()
+        {
+            CargandoForm VentanaLoading = new CargandoForm();
+            VentanaLoading.Close();
+        }
+
         private void InicioNuev_Click(object sender, EventArgs e)
         {
             Home.ActiveForm.Show();
@@ -211,12 +224,6 @@ namespace Sistema_Oaxaca
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void NombreCedente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 250 && e.KeyChar <= 255))
@@ -237,11 +244,6 @@ namespace Sistema_Oaxaca
             }
         }
 
-        private void Colonias_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Colonias_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 250 && e.KeyChar <= 255))
@@ -250,6 +252,12 @@ namespace Sistema_Oaxaca
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TabNuevoDoc.TabPages.Remove(Registro);
+            TabNuevoDoc.TabPages.Insert(0, EscanearTab);
         }
     }
 }

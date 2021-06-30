@@ -36,26 +36,27 @@ namespace Sistema_Oaxaca
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(185, 119);
+            this.label1.Location = new System.Drawing.Point(155, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 25);
+            this.label1.Size = new System.Drawing.Size(115, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cargando...";
+            this.label1.Text = "ESCANEANDO...";
+            this.label1.UseWaitCursor = true;
             // 
             // CargandoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 281);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(444, 236);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CargandoForm";
-            this.Text = "Cargando";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Escaneando";
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.Loading_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
