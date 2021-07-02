@@ -32,6 +32,8 @@ namespace Sistema_Oaxaca
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoDoc));
             this.TabNuevoDoc = new System.Windows.Forms.TabControl();
             this.Registro = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Hectareas = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -80,6 +82,8 @@ namespace Sistema_Oaxaca
             // 
             // Registro
             // 
+            this.Registro.Controls.Add(this.button3);
+            this.Registro.Controls.Add(this.button2);
             this.Registro.Controls.Add(this.dateTimePicker1);
             this.Registro.Controls.Add(this.Hectareas);
             this.Registro.Controls.Add(this.label9);
@@ -103,6 +107,28 @@ namespace Sistema_Oaxaca
             this.Registro.TabIndex = 0;
             this.Registro.Text = "Registro";
             this.Registro.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.Location = new System.Drawing.Point(790, 92);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 23);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "✓";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button2.Location = new System.Drawing.Point(380, 92);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 23);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "✓";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dateTimePicker1
             // 
@@ -244,6 +270,7 @@ namespace Sistema_Oaxaca
             this.NombreCedente.Name = "NombreCedente";
             this.NombreCedente.Size = new System.Drawing.Size(300, 28);
             this.NombreCedente.TabIndex = 1;
+            this.NombreCedente.TextChanged += new System.EventHandler(this.NombreCedente_TextChanged);
             this.NombreCedente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreCedente_KeyPress);
             // 
             // label1
@@ -283,7 +310,7 @@ namespace Sistema_Oaxaca
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(193, 501);
+            this.button1.Location = new System.Drawing.Point(1086, 130);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 39);
@@ -295,7 +322,7 @@ namespace Sistema_Oaxaca
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(367, 97);
+            this.label6.Location = new System.Drawing.Point(19, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(242, 25);
             this.label6.TabIndex = 6;
@@ -304,12 +331,14 @@ namespace Sistema_Oaxaca
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(372, 126);
+            this.listView1.Location = new System.Drawing.Point(24, 130);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(924, 368);
+            this.listView1.Size = new System.Drawing.Size(445, 368);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -335,11 +364,11 @@ namespace Sistema_Oaxaca
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 96);
+            this.label3.Location = new System.Drawing.Point(499, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 25);
+            this.label3.Size = new System.Drawing.Size(122, 25);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Documento Escaneado:";
+            this.label3.Text = "Vista Previa:";
             // 
             // FinNuevoDoc
             // 
@@ -364,7 +393,7 @@ namespace Sistema_Oaxaca
             this.Escanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Escanear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Escanear.ForeColor = System.Drawing.Color.White;
-            this.Escanear.Location = new System.Drawing.Point(24, 501);
+            this.Escanear.Location = new System.Drawing.Point(891, 130);
             this.Escanear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Escanear.Name = "Escanear";
             this.Escanear.Size = new System.Drawing.Size(163, 39);
@@ -376,11 +405,11 @@ namespace Sistema_Oaxaca
             // ImagenEscaneada
             // 
             this.ImagenEscaneada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ImagenEscaneada.Location = new System.Drawing.Point(24, 126);
+            this.ImagenEscaneada.Location = new System.Drawing.Point(504, 130);
             this.ImagenEscaneada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ImagenEscaneada.Name = "ImagenEscaneada";
             this.ImagenEscaneada.Size = new System.Drawing.Size(315, 370);
-            this.ImagenEscaneada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagenEscaneada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenEscaneada.TabIndex = 1;
             this.ImagenEscaneada.TabStop = false;
             // 
@@ -478,5 +507,7 @@ namespace Sistema_Oaxaca
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

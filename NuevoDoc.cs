@@ -30,16 +30,18 @@ namespace Sistema_Oaxaca
 
         private void NextDocNuevo_Click(object sender, EventArgs e)
         {
+
             NuevoId = MAPI.GetNewId();
 
             string Cedente = NombreCedente.Text;
             string Biblioteca = Application.StartupPath + @"\Biblioteca";
             string CarpCedente = Application.StartupPath + @"\Biblioteca\ " + NuevoId;
             string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
+
             try
             {
 
-                if (NombreCedente.Text == "" || NombreBeneficiario.Text == "" || SolarTerreno.Text == "" || Colonias.Text == "" || Hectareas.Text == "")
+                if (listBox1.SelectedIndex == -1 || listBox2.SelectedIndex == -1 || SolarTerreno.Text == "" || Colonias.Text == "" || Hectareas.Text == "")
                 {
                     MessageBox.Show("Llene todos los campos para continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -51,6 +53,9 @@ namespace Sistema_Oaxaca
                         int temp = Convert.ToInt32(Hectareas.Text);
                         TabNuevoDoc.TabPages.Remove(Registro);
                         TabNuevoDoc.TabPages.Insert(0, EscanearTab);
+                        //Imagenes de documentos escaneados en pestaña de escanear
+                        listView1.View = View.Details;
+                        listView1.Columns.Add("Documentos Escaneados", 700, HorizontalAlignment.Center);
 
                         if (Directory.Exists(Biblioteca))
                         {
@@ -63,7 +68,7 @@ namespace Sistema_Oaxaca
                             Directory.CreateDirectory(CarpCedente);
                             Directory.CreateDirectory(CarpetaVersion);
                         }
-                        
+
                         ObjTerreno terreno = new ObjTerreno();
                         VerTerreno version = new VerTerreno();
                         List<VerTerreno> versiones = new List<VerTerreno>();
@@ -86,7 +91,7 @@ namespace Sistema_Oaxaca
                     catch (Exception)
                     {
                         MessageBox.Show("Introduzca valor numerico en Hectareas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }                    
+                    }
                 }
             }
 
@@ -168,6 +173,8 @@ namespace Sistema_Oaxaca
                 ImagenEscaneada.ImageLocation = Ubicacion;
 
                 Hide();
+
+                ObtImagenes();
 
             }
             catch (COMException ex)
@@ -252,6 +259,146 @@ namespace Sistema_Oaxaca
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void NombreCedente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string TextoListBox1 = NombreCedente.Text;
+            int a = 0;
+
+            if (NombreCedente.Text == "")
+            {
+
+                if (listBox1.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Selecciona o introduce un Cedente por favor");
+                }
+            }
+
+            else
+            {
+                foreach (var item in listBox1.Items)
+                {
+                    if (item.ToString() == TextoListBox1)
+                    {
+                        a = 1;
+                    }
+                    else
+                    {
+                        a = 0;
+                    }
+                }
+                if (a == 1)
+                {
+                    MessageBox.Show("Cedente ya existente");
+                    int y = listBox1.FindString(TextoListBox1);
+                    listBox1.SetSelected(y, true);
+                }
+                else
+                {
+                    int x = 0;
+                    Int32.TryParse(listBox1.Items.Count.ToString(), out x);
+                    listBox1.Items.Add(TextoListBox1);
+                    listBox1.SetSelected(x, true);
+                }
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string TextoListBox2 = NombreBeneficiario.Text;
+            int b = 0;
+
+            if (NombreBeneficiario.Text == "")
+            {
+
+                if (listBox2.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Selecciona o introduce un Cedente por favor");
+                }
+            }
+
+            else
+            {
+                foreach (var item in listBox2.Items)
+                {
+                    if (item.ToString() == TextoListBox2)
+                    {
+                        b = 1;
+                    }
+                    else
+                    {
+                        b = 0;
+                    }
+                }
+                if (b == 1)
+                {
+                    MessageBox.Show("Cedente ya existente");
+                    int y = listBox2.FindString(TextoListBox2);
+                    listBox2.SetSelected(y, true);
+                }
+                else
+                {
+                    int x = 0;
+                    Int32.TryParse(listBox2.Items.Count.ToString(), out x);
+                    listBox2.Items.Add(TextoListBox2);
+                    listBox2.SetSelected(x, true);
+                }
+
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ObtImagenes();
+        }
+
+        private void ObtImagenes()
+        {
+            //Guardar Imagenes
+            ImageList imgs = new ImageList();
+            imgs.ImageSize = new Size(230, 250);
+            //Cargar Imagenes
+            String[] paths = { };
+            string Ubi = Application.StartupPath + @"\Biblioteca\" + NuevoId + @"\1 ";
+            paths = Directory.GetFiles(Ubi, "*.jpg",SearchOption.TopDirectoryOnly);
+            try
+            {
+                foreach(String path in paths)
+                {
+                    imgs.Images.Add(Image.FromFile(path));
+                }
+            }
+
+            catch(Exception e)
+            {
+                MessageBox.Show("e.Message");
+            }
+
+            //Mostrar Imagenes
+            listView1.SmallImageList = imgs;
+            int a= paths.Length;
+            for (int i= 0; i<=a;i++)    
+            {
+                int d = i + 1;
+                string b = d.ToString();
+                listView1.Items.Add(b, i);
+            }
+
+            //Preview de Imagen Seleccionada
+
+            foreach (ListViewItem itm in listView1.SelectedItems)
+            {
+                int imgIndex = itm.ImageIndex;
+                this.ImagenEscaneada.Image = imgs.Images[imgIndex];
+            }
+
         }
     }
 }
