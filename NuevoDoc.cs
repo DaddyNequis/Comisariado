@@ -35,8 +35,8 @@ namespace Sistema_Oaxaca
 
             string Cedente = NombreCedente.Text;
             string Biblioteca = Application.StartupPath + @"\Biblioteca";
-            string CarpCedente = Application.StartupPath + @"\Biblioteca\ " + NuevoId;
-            string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
+            string CarpCedente = Application.StartupPath + @"\Biblioteca\" + NuevoId;
+            string CarpetaVersion = Application.StartupPath + @"\Biblioteca\" + NuevoId + @"\1\ ";
 
             try
             {
@@ -135,7 +135,7 @@ namespace Sistema_Oaxaca
         private void Escanear_Click(object sender, EventArgs e)
         {
             string Cedente = NombreCedente.Text;
-            string CarpetaVersion = Application.StartupPath + @"\Biblioteca\ " + NuevoId + @"\1\ ";
+            string CarpetaVersion = Application.StartupPath + @"\Biblioteca\" + NuevoId + @"\1\ ";
             try
             {
 
@@ -210,6 +210,12 @@ namespace Sistema_Oaxaca
 
         private void NuevoDoc_Load_1(object sender, EventArgs e)
         {
+            NuevoId = 5;
+            TabNuevoDoc.TabPages.Remove(Registro);
+            TabNuevoDoc.TabPages.Insert(0, EscanearTab);
+
+
+
             try
             {
                 var deviceManager = new DeviceManager();
@@ -356,17 +362,23 @@ namespace Sistema_Oaxaca
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ObtImagenes();
+            //Preview de Imagen Seleccionada
+
+            foreach (ListViewItem itm in listView1.SelectedItems)
+            {
+                int imgIndex = itm.ImageIndex;
+                this.ImagenEscaneada.Image = listView1.SmallImageList.Images[imgIndex];
+            }
         }
 
         private void ObtImagenes()
         {
             //Guardar Imagenes
             ImageList imgs = new ImageList();
-            imgs.ImageSize = new Size(230, 250);
+            imgs.ImageSize = new Size(130, 150);
             //Cargar Imagenes
             String[] paths = { };
-            string Ubi = Application.StartupPath + @"\Biblioteca\" + NuevoId + @"\1 ";
+            string Ubi = Application.StartupPath + @"\Biblioteca\" + NuevoId + @"\1";
             paths = Directory.GetFiles(Ubi, "*.jpg",SearchOption.TopDirectoryOnly);
             try
             {
@@ -378,12 +390,13 @@ namespace Sistema_Oaxaca
 
             catch(Exception e)
             {
-                MessageBox.Show("e.Message");
+                MessageBox.Show(e.Message);
             }
 
             //Mostrar Imagenes
             listView1.SmallImageList = imgs;
-            int a= paths.Length;
+            listView1.LargeImageList = imgs;
+            int a= paths.Length - 1;
             for (int i= 0; i<=a;i++)    
             {
                 int d = i + 1;
@@ -391,14 +404,13 @@ namespace Sistema_Oaxaca
                 listView1.Items.Add(b, i);
             }
 
-            //Preview de Imagen Seleccionada
+      
 
-            foreach (ListViewItem itm in listView1.SelectedItems)
-            {
-                int imgIndex = itm.ImageIndex;
-                this.ImagenEscaneada.Image = imgs.Images[imgIndex];
-            }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ObtImagenes();
         }
     }
 }

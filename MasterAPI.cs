@@ -30,6 +30,20 @@ namespace Sistema_Oaxaca
 
         public String DirBiblioteca = Application.StartupPath + @"\Biblioteca";
 
+
+
+        public List<Terrenos> GetTerrenos()
+        {
+
+            string text = System.IO.File.ReadAllText(@"Biblioteca\biblioteca.json");
+            ListaTerrenos lista;
+            lista = JsonConvert.DeserializeObject<ListaTerrenos>(text);
+            List<Terrenos> terrenos = lista.ListaTrerrenos;
+
+
+
+            return terrenos;
+        }
         public Boolean RegistrarTerreno(VerTerreno verterreno, ObjTerreno terreno)
         {
            
