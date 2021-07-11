@@ -25,12 +25,7 @@ namespace Sistema_Oaxaca
 
         private void Home_Load(object sender, EventArgs e)
         {
-            Form1 NuForm = new Form1();
-            NuForm.Show();
-
-
-            MedTerrenos NuForDm = new MedTerrenos();
-            NuForDm.Show();
+   
         }
 
         private void label1_Click(object sender, EventArgs e)

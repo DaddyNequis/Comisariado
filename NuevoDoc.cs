@@ -77,13 +77,15 @@ namespace Sistema_Oaxaca
                         terreno.LastVersion = 1;
                         version.Cedentes = listBox1.Items.Cast<String>().ToList();
                         version.Beneficiarios = listBox2.Items.Cast<String>().ToList();
-                        version.Fecha = dateTimePicker1.ToString();
+                        version.Fecha = dateTimePicker1.Value.ToString();
                         version.Hectareas = Hectareas.Text;
                         version.Paraje = Colonias.Text;
                         version.VersionID = 1;
+                        version.Tipo = SolarTerreno.Text;
+
                         versiones.Add(version);
                         terreno.Versiones = versiones;
-                        string result = JsonConvert.SerializeObject(terreno);
+                                               string result = JsonConvert.SerializeObject(terreno);
                         File.WriteAllText(CarpCedente + @"\terreno.json", result);
                         MAPI.RegistrarTerreno(version, terreno);
 
@@ -211,8 +213,7 @@ namespace Sistema_Oaxaca
         private void NuevoDoc_Load_1(object sender, EventArgs e)
         {
             NuevoId = 5;
-            TabNuevoDoc.TabPages.Remove(Registro);
-            TabNuevoDoc.TabPages.Insert(0, EscanearTab);
+
 
 
 
