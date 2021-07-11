@@ -108,6 +108,7 @@ namespace Sistema_Oaxaca
             this.Medicionespng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Medicionespng.TabIndex = 2;
             this.Medicionespng.TabStop = false;
+            this.Medicionespng.Click += new System.EventHandler(this.Medicionespng_Click);
             // 
             // NuevoDoc
             // 

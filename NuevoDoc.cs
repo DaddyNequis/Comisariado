@@ -203,9 +203,8 @@ namespace Sistema_Oaxaca
 
         private void FinNuevoDoc_Click(object sender, EventArgs e)
         {
-
-
-
+            Home.ActiveForm.Show();
+            NuevoDoc.ActiveForm.Close();
         }
 
         private void NuevoDoc_Load_1(object sender, EventArgs e)
