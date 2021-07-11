@@ -18,13 +18,13 @@ namespace Sistema_Oaxaca
         public MedTerrenos()
         {
             InitializeComponent();
+            webView21.Source = new Uri("https://www.google.com.mx/maps/");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void webView21_Click(object sender, EventArgs e)
         {
 
-
-            webView21.Source = new Uri("https://www.google.com.mx/maps/");
         }
     }
 }

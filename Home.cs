@@ -25,7 +25,7 @@ namespace Sistema_Oaxaca
 
         private void Home_Load(object sender, EventArgs e)
         {
-   
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -68,6 +68,12 @@ namespace Sistema_Oaxaca
         {
             ConstanciaDoc VentanaConstanciaDoc = new ConstanciaDoc();
             VentanaConstanciaDoc.ShowDialog();
+        }
+
+        private void Medicionespng_Click(object sender, EventArgs e)
+        {
+            MedTerrenos VentanaMedTerrenos = new MedTerrenos();
+            VentanaMedTerrenos.ShowDialog();
         }
     }
 }
