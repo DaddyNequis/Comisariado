@@ -33,15 +33,19 @@ namespace Sistema_Oaxaca
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Constanciaspng = new System.Windows.Forms.PictureBox();
             this.LibreriaDocPng = new System.Windows.Forms.PictureBox();
             this.Medicionespng = new System.Windows.Forms.PictureBox();
             this.NuevoDoc = new System.Windows.Forms.PictureBox();
+            this.Constanciaspng = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LibreriaDocPng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Medicionespng)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuevoDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,19 +84,6 @@ namespace Sistema_Oaxaca
             this.label1.TabIndex = 0;
             this.label1.Text = "Comisariado Huaxpaltepec, Oax";
             // 
-            // Constanciaspng
-            // 
-            this.Constanciaspng.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Constanciaspng.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia;
-            this.Constanciaspng.Location = new System.Drawing.Point(690, 334);
-            this.Constanciaspng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Constanciaspng.Name = "Constanciaspng";
-            this.Constanciaspng.Size = new System.Drawing.Size(230, 230);
-            this.Constanciaspng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Constanciaspng.TabIndex = 6;
-            this.Constanciaspng.TabStop = false;
-            this.Constanciaspng.Click += new System.EventHandler(this.Constanciaspng_Click);
-            // 
             // LibreriaDocPng
             // 
             this.LibreriaDocPng.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -100,7 +91,7 @@ namespace Sistema_Oaxaca
             this.LibreriaDocPng.Location = new System.Drawing.Point(690, 109);
             this.LibreriaDocPng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LibreriaDocPng.Name = "LibreriaDocPng";
-            this.LibreriaDocPng.Size = new System.Drawing.Size(230, 230);
+            this.LibreriaDocPng.Size = new System.Drawing.Size(211, 199);
             this.LibreriaDocPng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LibreriaDocPng.TabIndex = 3;
             this.LibreriaDocPng.TabStop = false;
@@ -110,10 +101,10 @@ namespace Sistema_Oaxaca
             // 
             this.Medicionespng.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Medicionespng.Image = global::Sistema_Oaxaca.Properties.Resources.Mediciones;
-            this.Medicionespng.Location = new System.Drawing.Point(173, 343);
+            this.Medicionespng.Location = new System.Drawing.Point(173, 345);
             this.Medicionespng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Medicionespng.Name = "Medicionespng";
-            this.Medicionespng.Size = new System.Drawing.Size(228, 228);
+            this.Medicionespng.Size = new System.Drawing.Size(211, 199);
             this.Medicionespng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Medicionespng.TabIndex = 2;
             this.Medicionespng.TabStop = false;
@@ -121,15 +112,71 @@ namespace Sistema_Oaxaca
             // NuevoDoc
             // 
             this.NuevoDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NuevoDoc.Image = ((System.Drawing.Image)(resources.GetObject("NuevoDoc.Image")));
+            this.NuevoDoc.Image = global::Sistema_Oaxaca.Properties.Resources.New_Document;
             this.NuevoDoc.Location = new System.Drawing.Point(173, 109);
             this.NuevoDoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NuevoDoc.Name = "NuevoDoc";
-            this.NuevoDoc.Size = new System.Drawing.Size(230, 230);
+            this.NuevoDoc.Size = new System.Drawing.Size(211, 199);
             this.NuevoDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NuevoDoc.TabIndex = 0;
             this.NuevoDoc.TabStop = false;
             this.NuevoDoc.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Constanciaspng
+            // 
+            this.Constanciaspng.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Constanciaspng.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia1;
+            this.Constanciaspng.Location = new System.Drawing.Point(690, 345);
+            this.Constanciaspng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Constanciaspng.Name = "Constanciaspng";
+            this.Constanciaspng.Size = new System.Drawing.Size(211, 199);
+            this.Constanciaspng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Constanciaspng.TabIndex = 6;
+            this.Constanciaspng.TabStop = false;
+            this.Constanciaspng.Click += new System.EventHandler(this.Constanciaspng_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Location = new System.Drawing.Point(206, 317);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "NUEVO DOCUMENTO";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Location = new System.Drawing.Point(239, 554);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "MEDICIONES";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Location = new System.Drawing.Point(761, 317);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "LIBRERIA";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Location = new System.Drawing.Point(746, 554);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "CONSTANCIAS";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Home
             // 
@@ -137,6 +184,10 @@ namespace Sistema_Oaxaca
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1083, 599);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LibreriaDocPng);
             this.Controls.Add(this.Medicionespng);
@@ -152,11 +203,12 @@ namespace Sistema_Oaxaca
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LibreriaDocPng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Medicionespng)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuevoDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Constanciaspng)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -168,6 +220,10 @@ namespace Sistema_Oaxaca
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

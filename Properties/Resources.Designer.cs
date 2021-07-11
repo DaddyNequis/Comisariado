@@ -63,6 +63,16 @@ namespace Sistema_Oaxaca.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cargando {
+            get {
+                object obj = ResourceManager.GetObject("cargando", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Constancia {
             get {
                 object obj = ResourceManager.GetObject("Constancia", resourceCulture);
@@ -116,6 +126,16 @@ namespace Sistema_Oaxaca.Properties {
         internal static System.Drawing.Bitmap Constancia_Uso_Suelo {
             get {
                 object obj = ResourceManager.GetObject("Constancia_Uso_Suelo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Constancia1 {
+            get {
+                object obj = ResourceManager.GetObject("Constancia1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

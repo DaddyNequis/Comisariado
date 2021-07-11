@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Constancia_Solar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Constancia Solar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mediciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mediciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="New_Document" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New Document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Modificar_Documento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Modificar Documento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Libreria" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Libreria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Constancia_Cultivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Constancia Cultivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Constancia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Constancia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Constancia_Jornalero" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Constancia Jornalero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Contrato_Arrendamiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Contrato Arrendamiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cuadrito" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cuadrito.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Constancia_Pastoreo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Constancia Pastoreo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Constancia_Uso_Suelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Constancia Uso Suelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cargando" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cargando.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Constancia1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Constancia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
