@@ -30,7 +30,6 @@ namespace Sistema_Oaxaca
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConstanciaDoc));
-            this.InicioMod = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -51,27 +50,15 @@ namespace Sistema_Oaxaca
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // InicioMod
-            // 
-            this.InicioMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.InicioMod.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.InicioMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InicioMod.Location = new System.Drawing.Point(33, 12);
-            this.InicioMod.Name = "InicioMod";
-            this.InicioMod.Size = new System.Drawing.Size(129, 57);
-            this.InicioMod.TabIndex = 15;
-            this.InicioMod.Text = "Inicio";
-            this.InicioMod.UseVisualStyleBackColor = false;
-            this.InicioMod.Click += new System.EventHandler(this.InicioMod_Click);
-            // 
             // pictureBox7
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::Sistema_Oaxaca.Properties.Resources.Contrato_Arrendamiento;
-            this.pictureBox7.Location = new System.Drawing.Point(178, 453);
+            this.pictureBox7.Location = new System.Drawing.Point(134, 374);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(230, 230);
+            this.pictureBox7.Size = new System.Drawing.Size(174, 188);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
@@ -82,9 +69,10 @@ namespace Sistema_Oaxaca
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia_Jornalero;
-            this.pictureBox6.Location = new System.Drawing.Point(595, 453);
+            this.pictureBox6.Location = new System.Drawing.Point(446, 374);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(230, 230);
+            this.pictureBox6.Size = new System.Drawing.Size(174, 188);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
@@ -95,9 +83,10 @@ namespace Sistema_Oaxaca
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia_Uso_Suelo;
-            this.pictureBox4.Location = new System.Drawing.Point(1030, 453);
+            this.pictureBox4.Location = new System.Drawing.Point(772, 374);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(230, 230);
+            this.pictureBox4.Size = new System.Drawing.Size(174, 188);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
@@ -108,9 +97,10 @@ namespace Sistema_Oaxaca
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia_Solar;
-            this.pictureBox3.Location = new System.Drawing.Point(1030, 149);
+            this.pictureBox3.Location = new System.Drawing.Point(772, 121);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(230, 230);
+            this.pictureBox3.Size = new System.Drawing.Size(174, 188);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -121,9 +111,10 @@ namespace Sistema_Oaxaca
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia_Pastoreo;
-            this.pictureBox2.Location = new System.Drawing.Point(595, 149);
+            this.pictureBox2.Location = new System.Drawing.Point(446, 121);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(230, 230);
+            this.pictureBox2.Size = new System.Drawing.Size(174, 188);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -134,9 +125,10 @@ namespace Sistema_Oaxaca
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Sistema_Oaxaca.Properties.Resources.Constancia_Cultivo;
-            this.pictureBox1.Location = new System.Drawing.Point(178, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(134, 121);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 230);
+            this.pictureBox1.Size = new System.Drawing.Size(174, 188);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -146,7 +138,7 @@ namespace Sistema_Oaxaca
             // 
             this.pictureBox5.Image = global::Sistema_Oaxaca.Properties.Resources.Cuadrito;
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(0, 0);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,8 +151,7 @@ namespace Sistema_Oaxaca
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(621, 57);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(466, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 31);
             this.label2.TabIndex = 17;
@@ -170,13 +161,11 @@ namespace Sistema_Oaxaca
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.InicioMod);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1401, 91);
+            this.panel1.Size = new System.Drawing.Size(1051, 74);
             this.panel1.TabIndex = 18;
             // 
             // label1
@@ -185,8 +174,7 @@ namespace Sistema_Oaxaca
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(399, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(299, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(597, 44);
             this.label1.TabIndex = 16;
@@ -194,10 +182,10 @@ namespace Sistema_Oaxaca
             // 
             // ConstanciaDoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1401, 736);
+            this.ClientSize = new System.Drawing.Size(1051, 612);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
@@ -208,6 +196,7 @@ namespace Sistema_Oaxaca
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ConstanciaDoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Constancias";
@@ -234,7 +223,6 @@ namespace Sistema_Oaxaca
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button InicioMod;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
