@@ -31,7 +31,7 @@ namespace Sistema_Oaxaca
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarDoc));
             this.TabNuevoDoc = new System.Windows.Forms.TabControl();
-            this.Registro = new System.Windows.Forms.TabPage();
+            this.chicodo = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -41,15 +41,13 @@ namespace Sistema_Oaxaca
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.NextDocNuevo = new System.Windows.Forms.Button();
             this.Colonias = new System.Windows.Forms.ComboBox();
-            this.SolarTerreno = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.labelParajeColonia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.NombreBeneficiario = new System.Windows.Forms.TextBox();
             this.Beneficiario = new System.Windows.Forms.Label();
             this.NombreCedente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.EscanearTab = new System.Windows.Forms.TabPage();
+            this.vaginado = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -63,16 +61,16 @@ namespace Sistema_Oaxaca
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.TabNuevoDoc.SuspendLayout();
-            this.Registro.SuspendLayout();
-            this.EscanearTab.SuspendLayout();
+            this.chicodo.SuspendLayout();
+            this.vaginado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenEscaneada)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabNuevoDoc
             // 
-            this.TabNuevoDoc.Controls.Add(this.Registro);
-            this.TabNuevoDoc.Controls.Add(this.EscanearTab);
+            this.TabNuevoDoc.Controls.Add(this.chicodo);
+            this.TabNuevoDoc.Controls.Add(this.vaginado);
             this.TabNuevoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabNuevoDoc.Location = new System.Drawing.Point(114, 153);
             this.TabNuevoDoc.Margin = new System.Windows.Forms.Padding(2);
@@ -81,33 +79,31 @@ namespace Sistema_Oaxaca
             this.TabNuevoDoc.Size = new System.Drawing.Size(1039, 555);
             this.TabNuevoDoc.TabIndex = 15;
             // 
-            // Registro
+            // chicodo
             // 
-            this.Registro.Controls.Add(this.button4);
-            this.Registro.Controls.Add(this.button2);
-            this.Registro.Controls.Add(this.dateTimePicker1);
-            this.Registro.Controls.Add(this.Hectareas);
-            this.Registro.Controls.Add(this.label9);
-            this.Registro.Controls.Add(this.listBox2);
-            this.Registro.Controls.Add(this.listBox1);
-            this.Registro.Controls.Add(this.NextDocNuevo);
-            this.Registro.Controls.Add(this.Colonias);
-            this.Registro.Controls.Add(this.SolarTerreno);
-            this.Registro.Controls.Add(this.label4);
-            this.Registro.Controls.Add(this.labelParajeColonia);
-            this.Registro.Controls.Add(this.label2);
-            this.Registro.Controls.Add(this.NombreBeneficiario);
-            this.Registro.Controls.Add(this.Beneficiario);
-            this.Registro.Controls.Add(this.NombreCedente);
-            this.Registro.Controls.Add(this.label1);
-            this.Registro.Location = new System.Drawing.Point(4, 34);
-            this.Registro.Margin = new System.Windows.Forms.Padding(2);
-            this.Registro.Name = "Registro";
-            this.Registro.Padding = new System.Windows.Forms.Padding(2);
-            this.Registro.Size = new System.Drawing.Size(1031, 517);
-            this.Registro.TabIndex = 0;
-            this.Registro.Text = "    Registro    ";
-            this.Registro.UseVisualStyleBackColor = true;
+            this.chicodo.Controls.Add(this.button4);
+            this.chicodo.Controls.Add(this.button2);
+            this.chicodo.Controls.Add(this.dateTimePicker1);
+            this.chicodo.Controls.Add(this.Hectareas);
+            this.chicodo.Controls.Add(this.label9);
+            this.chicodo.Controls.Add(this.listBox2);
+            this.chicodo.Controls.Add(this.listBox1);
+            this.chicodo.Controls.Add(this.NextDocNuevo);
+            this.chicodo.Controls.Add(this.Colonias);
+            this.chicodo.Controls.Add(this.labelParajeColonia);
+            this.chicodo.Controls.Add(this.label2);
+            this.chicodo.Controls.Add(this.NombreBeneficiario);
+            this.chicodo.Controls.Add(this.Beneficiario);
+            this.chicodo.Controls.Add(this.NombreCedente);
+            this.chicodo.Controls.Add(this.label1);
+            this.chicodo.Location = new System.Drawing.Point(4, 29);
+            this.chicodo.Margin = new System.Windows.Forms.Padding(2);
+            this.chicodo.Name = "chicodo";
+            this.chicodo.Padding = new System.Windows.Forms.Padding(2);
+            this.chicodo.Size = new System.Drawing.Size(1031, 522);
+            this.chicodo.TabIndex = 0;
+            this.chicodo.Text = "    Informacion    ";
+            this.chicodo.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -121,6 +117,7 @@ namespace Sistema_Oaxaca
             this.button4.TabIndex = 20;
             this.button4.Text = "+";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -134,40 +131,41 @@ namespace Sistema_Oaxaca
             this.button2.TabIndex = 18;
             this.button2.Text = "+";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(72, 342);
+            this.dateTimePicker1.Location = new System.Drawing.Point(747, 255);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(248, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(201, 26);
             this.dateTimePicker1.TabIndex = 17;
             // 
             // Hectareas
             // 
             this.Hectareas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hectareas.Location = new System.Drawing.Point(750, 261);
+            this.Hectareas.Location = new System.Drawing.Point(486, 257);
             this.Hectareas.Margin = new System.Windows.Forms.Padding(2);
             this.Hectareas.Name = "Hectareas";
-            this.Hectareas.Size = new System.Drawing.Size(198, 28);
+            this.Hectareas.Size = new System.Drawing.Size(198, 24);
             this.Hectareas.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(745, 230);
+            this.label9.Location = new System.Drawing.Point(481, 231);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 25);
+            this.label9.Size = new System.Drawing.Size(87, 20);
             this.label9.TabIndex = 14;
             this.label9.Text = "Hectareas:";
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 25;
+            this.listBox2.ItemHeight = 20;
             this.listBox2.Location = new System.Drawing.Point(562, 98);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(386, 104);
@@ -176,7 +174,7 @@ namespace Sistema_Oaxaca
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(72, 98);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(386, 104);
@@ -202,33 +200,11 @@ namespace Sistema_Oaxaca
             // 
             this.Colonias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Colonias.FormattingEnabled = true;
-            this.Colonias.Location = new System.Drawing.Point(72, 261);
+            this.Colonias.Location = new System.Drawing.Point(72, 256);
             this.Colonias.Margin = new System.Windows.Forms.Padding(2);
             this.Colonias.Name = "Colonias";
-            this.Colonias.Size = new System.Drawing.Size(386, 30);
+            this.Colonias.Size = new System.Drawing.Size(386, 25);
             this.Colonias.TabIndex = 9;
-            // 
-            // SolarTerreno
-            // 
-            this.SolarTerreno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SolarTerreno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SolarTerreno.FormattingEnabled = true;
-            this.SolarTerreno.Location = new System.Drawing.Point(503, 261);
-            this.SolarTerreno.Margin = new System.Windows.Forms.Padding(2);
-            this.SolarTerreno.Name = "SolarTerreno";
-            this.SolarTerreno.Size = new System.Drawing.Size(216, 30);
-            this.SolarTerreno.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(500, 230);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 25);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Solar o Terreno:";
             // 
             // labelParajeColonia
             // 
@@ -237,7 +213,7 @@ namespace Sistema_Oaxaca
             this.labelParajeColonia.Location = new System.Drawing.Point(69, 230);
             this.labelParajeColonia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelParajeColonia.Name = "labelParajeColonia";
-            this.labelParajeColonia.Size = new System.Drawing.Size(74, 25);
+            this.labelParajeColonia.Size = new System.Drawing.Size(58, 20);
             this.labelParajeColonia.TabIndex = 6;
             this.labelParajeColonia.Text = "Paraje:";
             // 
@@ -245,10 +221,10 @@ namespace Sistema_Oaxaca
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 315);
+            this.label2.Location = new System.Drawing.Point(743, 233);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 25);
+            this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Fecha:";
             // 
@@ -258,7 +234,7 @@ namespace Sistema_Oaxaca
             this.NombreBeneficiario.Location = new System.Drawing.Point(562, 63);
             this.NombreBeneficiario.Margin = new System.Windows.Forms.Padding(2);
             this.NombreBeneficiario.Name = "NombreBeneficiario";
-            this.NombreBeneficiario.Size = new System.Drawing.Size(356, 28);
+            this.NombreBeneficiario.Size = new System.Drawing.Size(356, 24);
             this.NombreBeneficiario.TabIndex = 3;
             // 
             // Beneficiario
@@ -268,7 +244,7 @@ namespace Sistema_Oaxaca
             this.Beneficiario.Location = new System.Drawing.Point(557, 36);
             this.Beneficiario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Beneficiario.Name = "Beneficiario";
-            this.Beneficiario.Size = new System.Drawing.Size(119, 25);
+            this.Beneficiario.Size = new System.Drawing.Size(96, 20);
             this.Beneficiario.TabIndex = 2;
             this.Beneficiario.Text = "Beneficiario:";
             // 
@@ -278,7 +254,7 @@ namespace Sistema_Oaxaca
             this.NombreCedente.Location = new System.Drawing.Point(72, 62);
             this.NombreCedente.Margin = new System.Windows.Forms.Padding(2);
             this.NombreCedente.Name = "NombreCedente";
-            this.NombreCedente.Size = new System.Drawing.Size(356, 28);
+            this.NombreCedente.Size = new System.Drawing.Size(356, 24);
             this.NombreCedente.TabIndex = 1;
             this.NombreCedente.Text = "FERNANDO ISAAC NEQUIS ALAN";
             // 
@@ -289,29 +265,29 @@ namespace Sistema_Oaxaca
             this.label1.Location = new System.Drawing.Point(68, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 25);
+            this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cedentes:";
             // 
-            // EscanearTab
+            // vaginado
             // 
-            this.EscanearTab.Controls.Add(this.button1);
-            this.EscanearTab.Controls.Add(this.label6);
-            this.EscanearTab.Controls.Add(this.listView1);
-            this.EscanearTab.Controls.Add(this.comboBox1);
-            this.EscanearTab.Controls.Add(this.label5);
-            this.EscanearTab.Controls.Add(this.label3);
-            this.EscanearTab.Controls.Add(this.FinNuevoDoc);
-            this.EscanearTab.Controls.Add(this.Escanear);
-            this.EscanearTab.Controls.Add(this.ImagenEscaneada);
-            this.EscanearTab.Location = new System.Drawing.Point(4, 34);
-            this.EscanearTab.Margin = new System.Windows.Forms.Padding(2);
-            this.EscanearTab.Name = "EscanearTab";
-            this.EscanearTab.Padding = new System.Windows.Forms.Padding(2);
-            this.EscanearTab.Size = new System.Drawing.Size(1031, 517);
-            this.EscanearTab.TabIndex = 1;
-            this.EscanearTab.Text = "    Escanear    ";
-            this.EscanearTab.UseVisualStyleBackColor = true;
+            this.vaginado.Controls.Add(this.button1);
+            this.vaginado.Controls.Add(this.label6);
+            this.vaginado.Controls.Add(this.listView1);
+            this.vaginado.Controls.Add(this.comboBox1);
+            this.vaginado.Controls.Add(this.label5);
+            this.vaginado.Controls.Add(this.label3);
+            this.vaginado.Controls.Add(this.FinNuevoDoc);
+            this.vaginado.Controls.Add(this.Escanear);
+            this.vaginado.Controls.Add(this.ImagenEscaneada);
+            this.vaginado.Location = new System.Drawing.Point(4, 29);
+            this.vaginado.Margin = new System.Windows.Forms.Padding(2);
+            this.vaginado.Name = "vaginado";
+            this.vaginado.Padding = new System.Windows.Forms.Padding(2);
+            this.vaginado.Size = new System.Drawing.Size(1031, 522);
+            this.vaginado.TabIndex = 1;
+            this.vaginado.Text = "    Escanear    ";
+            this.vaginado.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -335,7 +311,7 @@ namespace Sistema_Oaxaca
             this.label6.Location = new System.Drawing.Point(305, 113);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 25);
+            this.label6.Size = new System.Drawing.Size(197, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "Documentos Escaneados:";
             // 
@@ -356,7 +332,7 @@ namespace Sistema_Oaxaca
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(34, 54);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(654, 33);
+            this.comboBox1.Size = new System.Drawing.Size(654, 28);
             this.comboBox1.TabIndex = 1;
             // 
             // label5
@@ -366,7 +342,7 @@ namespace Sistema_Oaxaca
             this.label5.Location = new System.Drawing.Point(31, 27);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(223, 25);
+            this.label5.Size = new System.Drawing.Size(179, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Selecciona el Escanner:";
             // 
@@ -377,7 +353,7 @@ namespace Sistema_Oaxaca
             this.label3.Location = new System.Drawing.Point(30, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Vista Previa:";
             // 
@@ -395,6 +371,7 @@ namespace Sistema_Oaxaca
             this.FinNuevoDoc.TabIndex = 3;
             this.FinNuevoDoc.Text = "Terminar";
             this.FinNuevoDoc.UseVisualStyleBackColor = false;
+            this.FinNuevoDoc.Click += new System.EventHandler(this.FinNuevoDoc_Click);
             // 
             // Escanear
             // 
@@ -410,6 +387,7 @@ namespace Sistema_Oaxaca
             this.Escanear.TabIndex = 2;
             this.Escanear.Text = "Escanear";
             this.Escanear.UseVisualStyleBackColor = false;
+            this.Escanear.Click += new System.EventHandler(this.Escanear_Click);
             // 
             // ImagenEscaneada
             // 
@@ -440,9 +418,9 @@ namespace Sistema_Oaxaca
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(468, 47);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(239, 31);
+            this.label7.Size = new System.Drawing.Size(215, 25);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Nuevo Documento";
+            this.label7.Text = "Modificar Documento";
             // 
             // label8
             // 
@@ -451,7 +429,7 @@ namespace Sistema_Oaxaca
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(337, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(585, 42);
+            this.label8.Size = new System.Drawing.Size(465, 33);
             this.label8.TabIndex = 0;
             this.label8.Text = "Comisariado Huaxpaltepec, Oax";
             // 
@@ -465,16 +443,16 @@ namespace Sistema_Oaxaca
             this.Controls.Add(this.TabNuevoDoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ModificarDoc";
             this.Text = "ModificarDoc";
             this.Load += new System.EventHandler(this.ModificarDoc_Load);
             this.TabNuevoDoc.ResumeLayout(false);
-            this.Registro.ResumeLayout(false);
-            this.Registro.PerformLayout();
-            this.EscanearTab.ResumeLayout(false);
-            this.EscanearTab.PerformLayout();
+            this.chicodo.ResumeLayout(false);
+            this.chicodo.PerformLayout();
+            this.vaginado.ResumeLayout(false);
+            this.vaginado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenEscaneada)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -484,7 +462,7 @@ namespace Sistema_Oaxaca
 
         #endregion
         private System.Windows.Forms.TabControl TabNuevoDoc;
-        private System.Windows.Forms.TabPage Registro;
+        private System.Windows.Forms.TabPage chicodo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -494,15 +472,13 @@ namespace Sistema_Oaxaca
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button NextDocNuevo;
         private System.Windows.Forms.ComboBox Colonias;
-        private System.Windows.Forms.ComboBox SolarTerreno;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelParajeColonia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox NombreBeneficiario;
         private System.Windows.Forms.Label Beneficiario;
         private System.Windows.Forms.TextBox NombreCedente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage EscanearTab;
+        private System.Windows.Forms.TabPage vaginado;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView listView1;
