@@ -73,7 +73,21 @@ namespace Sistema_Oaxaca
         }
 
 
+        public ObjTerreno GetTerrenoById(int ID)
+        {
+            String DirTerreno = DirBiblioteca + @"\" + ID;
+            string text = System.IO.File.ReadAllText(DirTerreno + @"\terreno.json");
 
+
+            ObjTerreno ElTerreno = JsonConvert.DeserializeObject<ObjTerreno>(text);
+
+
+
+
+
+
+            return ElTerreno;
+        }
 
         public int GetNewId()
         {
@@ -110,6 +124,40 @@ namespace Sistema_Oaxaca
             return true;
 
         }
+
+        public Boolean RegVersionTerreno(VerTerreno verterreno, ObjTerreno terreno)
+        {
+
+            string text = System.IO.File.ReadAllText(@"Biblioteca\biblioteca.json");
+            ListaTerrenos lista;
+            lista = JsonConvert.DeserializeObject<ListaTerrenos>(text);
+            List<Terrenos> terrenos = lista.ListaTrerrenos;
+            Terrenos lterreno = terrenos.Where(p=>p.DocumentID.Equals(terreno.DocumentID)).FirstOrDefault();
+
+
+            lterreno.Beneficiarios = verterreno.Beneficiarios;
+            lterreno.Fecha = verterreno.Fecha;
+            lterreno.Cedentes = verterreno.Cedentes;
+            lterreno.Hectareas = verterreno.Hectareas;
+            lterreno.Paraje = verterreno.Paraje;
+
+
+
+            
+
+            //terrenos.Add(lterreno);
+
+
+            lista = new ListaTerrenos();
+            lista.ListaTrerrenos = terrenos;
+            lista.count = terrenos.Count();
+
+
+            string result = JsonConvert.SerializeObject(lista);
+            File.WriteAllText(DirBiblioteca + @"\biblioteca.json", result);
+            return true;
+        }
+
 
     }
 }

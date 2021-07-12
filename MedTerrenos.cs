@@ -26,5 +26,16 @@ namespace Sistema_Oaxaca
         {
 
         }
+
+        private void MedTerrenos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MedTerrenos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            webView21.Hide();
+
+        }
     }
 }

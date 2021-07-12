@@ -51,8 +51,7 @@ namespace Sistema_Oaxaca
                     try
                     {
                         int temp = Convert.ToInt32(Hectareas.Text);
-                        TabNuevoDoc.TabPages.Remove(Registro);
-                        TabNuevoDoc.TabPages.Insert(0, EscanearTab);
+                       
                         //Imagenes de documentos escaneados en pestaña de escanear
                         listView1.View = View.Details;
                         listView1.Columns.Add("Documentos Escaneados", 700, HorizontalAlignment.Center);
@@ -88,7 +87,8 @@ namespace Sistema_Oaxaca
                                                string result = JsonConvert.SerializeObject(terreno);
                         File.WriteAllText(CarpCedente + @"\terreno.json", result);
                         MAPI.RegistrarTerreno(version, terreno);
-
+                        TabNuevoDoc.TabPages.Remove(Registro);
+                        TabNuevoDoc.TabPages.Insert(0, EscanearTab);
                     }
                     catch (Exception)
                     {
