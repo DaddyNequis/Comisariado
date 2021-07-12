@@ -318,46 +318,7 @@ namespace Sistema_Oaxaca
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string TextoListBox2 = NombreBeneficiario.Text;
-            int b = 0;
-
-            if (NombreBeneficiario.Text == "")
-            {
-
-                if (listBox2.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Selecciona o introduce un Cedente por favor");
-                }
-            }
-
-            else
-            {
-                foreach (var item in listBox2.Items)
-                {
-                    if (item.ToString() == TextoListBox2)
-                    {
-                        b = 1;
-                    }
-                    else
-                    {
-                        b = 0;
-                    }
-                }
-                if (b == 1)
-                {
-                    MessageBox.Show("Cedente ya existente");
-                    int y = listBox2.FindString(TextoListBox2);
-                    listBox2.SetSelected(y, true);
-                }
-                else
-                {
-                    int x = 0;
-                    Int32.TryParse(listBox2.Items.Count.ToString(), out x);
-                    listBox2.Items.Add(TextoListBox2);
-                    listBox2.SetSelected(x, true);
-                }
-
-            }
+           
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -411,6 +372,50 @@ namespace Sistema_Oaxaca
         private void button1_Click(object sender, EventArgs e)
         {
             ObtImagenes();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string TextoListBox2 = NombreBeneficiario.Text;
+            int b = 0;
+
+            if (NombreBeneficiario.Text == "")
+            {
+
+                if (listBox2.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Selecciona o introduce un Cedente por favor");
+                }
+            }
+
+            else
+            {
+                foreach (var item in listBox2.Items)
+                {
+                    if (item.ToString() == TextoListBox2)
+                    {
+                        b = 1;
+                    }
+                    else
+                    {
+                        b = 0;
+                    }
+                }
+                if (b == 1)
+                {
+                    MessageBox.Show("Cedente ya existente");
+                    int y = listBox2.FindString(TextoListBox2);
+                    listBox2.SetSelected(y, true);
+                }
+                else
+                {
+                    int x = 0;
+                    Int32.TryParse(listBox2.Items.Count.ToString(), out x);
+                    listBox2.Items.Add(TextoListBox2);
+                    listBox2.SetSelected(x, true);
+                }
+
+            }
         }
     }
 }

@@ -44,10 +44,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(41, 109);
-            this.webView21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.webView21.Location = new System.Drawing.Point(31, 89);
+            this.webView21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(1308, 595);
+            this.webView21.Size = new System.Drawing.Size(981, 616);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
             this.webView21.Click += new System.EventHandler(this.webView21_Click);
@@ -57,9 +57,9 @@
             this.Cuadrito2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.Cuadrito2.Dock = System.Windows.Forms.DockStyle.Top;
             this.Cuadrito2.Location = new System.Drawing.Point(0, 0);
-            this.Cuadrito2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Cuadrito2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cuadrito2.Name = "Cuadrito2";
-            this.Cuadrito2.Size = new System.Drawing.Size(1401, 93);
+            this.Cuadrito2.Size = new System.Drawing.Size(1051, 76);
             this.Cuadrito2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Cuadrito2.TabIndex = 9;
             this.Cuadrito2.TabStop = false;
@@ -70,8 +70,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(406, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(304, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(585, 42);
             this.label1.TabIndex = 10;
@@ -83,8 +82,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(620, 53);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(465, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 31);
             this.label2.TabIndex = 11;
@@ -92,15 +90,15 @@
             // 
             // MedTerrenos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1401, 736);
+            this.ClientSize = new System.Drawing.Size(1051, 731);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.Cuadrito2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MedTerrenos";
             this.Text = "MedTerrenos";
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
