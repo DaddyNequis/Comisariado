@@ -15,6 +15,8 @@ namespace Sistema_Oaxaca
         public Libreria()
         {
             InitializeComponent();
+            comboBox1.Items.Add("Solar");
+            comboBox1.Items.Add("Terreno");
         }
 
 
@@ -87,7 +89,12 @@ namespace Sistema_Oaxaca
             }
             else
             {
-
+                DataTable latabla = loadList();
+                dataGridView1.DataSource = latabla;
+                string a = textBox1.Text;
+                DataView dv = new DataView(latabla);
+                dv.RowFilter = "Cedente= '%" + a + "%'";
+                dataGridView1.DataSource = dv;
             }
         }
 
@@ -124,7 +131,12 @@ namespace Sistema_Oaxaca
             }
             else
             {
-
+                DataTable latabla = loadList();
+                dataGridView1.DataSource = latabla;
+                string a = BENEFICIARIOBOX.Text;
+                DataView dv = new DataView(latabla);
+                dv.RowFilter = "Beneficiario= '%" + a + "%'";
+                dataGridView1.DataSource = dv;
             }
         }
 
@@ -136,7 +148,12 @@ namespace Sistema_Oaxaca
             }
             else
             {
-
+                DataTable latabla = loadList();
+                dataGridView1.DataSource = latabla;
+                string a = comboBox1.Text;
+                DataView dv = new DataView(latabla);
+                dv.RowFilter = "Tipo= '%" + a + "%'";
+                dataGridView1.DataSource = dv;
             }
         }
 
@@ -148,7 +165,12 @@ namespace Sistema_Oaxaca
             }
             else
             {
-
+                DataTable latabla = loadList();
+                dataGridView1.DataSource = latabla;
+                string a = PARAJEBOX.Text;
+                DataView dv = new DataView(latabla);
+                dv.RowFilter = "Paraje Like '%"+ a +"%'";
+                dataGridView1.DataSource = dv;
             }
         }
 
@@ -160,7 +182,15 @@ namespace Sistema_Oaxaca
             }
             else
             {
-
+                DataTable latabla = loadList();
+                dataGridView1.DataSource = latabla;
+                FECHA.Format = DateTimePickerFormat.Custom;
+                FECHA.CustomFormat = "dd'/'MM'/'yyyy";
+                string a = FECHA.Text;
+                MessageBox.Show(a);
+                DataView dv = new DataView(latabla);
+                dv.RowFilter = "Fecha Like '%" + a + "%'";
+                dataGridView1.DataSource = dv;
             }
         }
     }

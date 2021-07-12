@@ -414,6 +414,5 @@ namespace Sistema_Oaxaca
 
             }
         }
-
     }
 }
