@@ -267,10 +267,6 @@ namespace Sistema_Oaxaca
             }
         }
 
-        private void NombreCedente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -374,6 +370,7 @@ namespace Sistema_Oaxaca
             ObtImagenes();
         }
 
+
         private void button4_Click(object sender, EventArgs e)
         {
             string TextoListBox2 = NombreBeneficiario.Text;
@@ -417,5 +414,6 @@ namespace Sistema_Oaxaca
 
             }
         }
+
     }
 }
