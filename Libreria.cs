@@ -15,8 +15,6 @@ namespace Sistema_Oaxaca
         public Libreria()
         {
             InitializeComponent();
-            comboBox1.Items.Add("SOLAR");
-            comboBox1.Items.Add("TERRENO");
         }
 
 
@@ -76,7 +74,14 @@ namespace Sistema_Oaxaca
 
         private void BotonBuscar_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Introduzca nombre de Cedente");
+            }
+            else
+            {
 
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -97,6 +102,54 @@ namespace Sistema_Oaxaca
         private void buttonver_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (BENEFICIARIOBOX.Text == "")
+            {
+                MessageBox.Show("Introduzca nombre de Beneficiario");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Selecciona un Tipo de terreno");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (PARAJEBOX.Text == "")
+            {
+                MessageBox.Show("Introduzca un paraje");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (FECHA.Text == "")
+            {
+                MessageBox.Show("Introduzca un paraje");
+            }
+            else
+            {
+
+            }
         }
     }
 }
