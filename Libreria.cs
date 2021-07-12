@@ -24,7 +24,7 @@ namespace Sistema_Oaxaca
       
 
 
-        public void loadList()
+        public DataTable loadList()
         {
 
             List<Terrenos> terrenos =  MAPI.GetTerrenos();
@@ -43,7 +43,14 @@ namespace Sistema_Oaxaca
                     values[i] = props[i].GetValue(item) ?? DBNull.Value;
                 table.Rows.Add(values);
             }
-            dataGridView1.DataSource = table;
+
+
+
+
+            return table;
+
+
+           
 
 
 
@@ -91,12 +98,17 @@ namespace Sistema_Oaxaca
 
         private void button2_Click(object sender, EventArgs e)
         {
-            loadList();
+            dataGridView1.DataSource = loadList();
         }
 
         private void Libreria_Load(object sender, EventArgs e)
         {
-            loadList();
+            DataTable latabla = loadList();
+
+
+
+            dataGridView1.DataSource = latabla;
+         
         }
 
         private void buttonver_Click(object sender, EventArgs e)

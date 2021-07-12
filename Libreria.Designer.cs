@@ -67,9 +67,9 @@
             this.Cuadrito2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.Cuadrito2.Dock = System.Windows.Forms.DockStyle.Top;
             this.Cuadrito2.Location = new System.Drawing.Point(0, 0);
-            this.Cuadrito2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Cuadrito2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cuadrito2.Name = "Cuadrito2";
-            this.Cuadrito2.Size = new System.Drawing.Size(1401, 121);
+            this.Cuadrito2.Size = new System.Drawing.Size(1051, 98);
             this.Cuadrito2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Cuadrito2.TabIndex = 8;
             this.Cuadrito2.TabStop = false;
@@ -78,6 +78,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             this.dataGridView1.Location = new System.Drawing.Point(16, 230);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -93,6 +94,7 @@
             this.BotonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(151, 47);
+
             this.BotonBuscar.TabIndex = 11;
             this.BotonBuscar.Text = "BUSCAR ARCHIVO";
             this.BotonBuscar.UseVisualStyleBackColor = false;
@@ -101,10 +103,10 @@
             // buttonver
             // 
             this.buttonver.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonver.Location = new System.Drawing.Point(1123, 165);
-            this.buttonver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonver.Location = new System.Drawing.Point(842, 134);
+            this.buttonver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonver.Name = "buttonver";
-            this.buttonver.Size = new System.Drawing.Size(131, 47);
+            this.buttonver.Size = new System.Drawing.Size(98, 38);
             this.buttonver.TabIndex = 12;
             this.buttonver.Text = "EDITAR";
             this.buttonver.UseVisualStyleBackColor = false;
@@ -113,10 +115,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightGreen;
-            this.button2.Location = new System.Drawing.Point(1259, 165);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(944, 134);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 47);
+            this.button2.Size = new System.Drawing.Size(98, 38);
             this.button2.TabIndex = 13;
             this.button2.Text = "ACTUALIZAR";
             this.button2.UseVisualStyleBackColor = false;
@@ -128,7 +130,8 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(375, 11);
+            this.label1.Location = new System.Drawing.Point(281, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(597, 44);
             this.label1.TabIndex = 14;
@@ -140,7 +143,8 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(100)))), ((int)(((byte)(36)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(553, 52);
+            this.label2.Location = new System.Drawing.Point(415, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(304, 29);
             this.label2.TabIndex = 15;
@@ -149,13 +153,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 123);
+            this.label3.Location = new System.Drawing.Point(10, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 17);
+            this.label3.Size = new System.Drawing.Size(88, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "BUSCAR POR:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+
             // Busquedas
             // 
             this.Busquedas.Controls.Add(this.tabPage1);
@@ -302,21 +308,26 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(199, 24);
             this.comboBox1.TabIndex = 28;
+
             // 
             // FECHA
             // 
+
             this.FECHA.Location = new System.Drawing.Point(16, 25);
             this.FECHA.Name = "FECHA";
             this.FECHA.Size = new System.Drawing.Size(200, 22);
             this.FECHA.TabIndex = 27;
+
             // 
             // Libreria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+
             this.ClientSize = new System.Drawing.Size(1401, 736);
             this.Controls.Add(this.Busquedas);
+
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -326,7 +337,9 @@
             this.Controls.Add(this.Cuadrito2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+
             this.Margin = new System.Windows.Forms.Padding(4);
+
             this.Name = "Libreria";
             this.Text = "Libreria";
             this.Load += new System.EventHandler(this.Libreria_Load);
