@@ -52,6 +52,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.FECHA = new System.Windows.Forms.DateTimePicker();
             this.button5 = new System.Windows.Forms.Button();
+            this.LIMPIAR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Cuadrito2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Busquedas.SuspendLayout();
@@ -322,12 +323,24 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // LIMPIAR
+            // 
+            this.LIMPIAR.BackColor = System.Drawing.Color.Gold;
+            this.LIMPIAR.Location = new System.Drawing.Point(758, 171);
+            this.LIMPIAR.Name = "LIMPIAR";
+            this.LIMPIAR.Size = new System.Drawing.Size(131, 47);
+            this.LIMPIAR.TabIndex = 27;
+            this.LIMPIAR.Text = "LIMPIAR";
+            this.LIMPIAR.UseVisualStyleBackColor = false;
+            this.LIMPIAR.Click += new System.EventHandler(this.LIMPIAR_Click);
+            // 
             // Libreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1868, 906);
+            this.Controls.Add(this.LIMPIAR);
             this.Controls.Add(this.Busquedas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -383,5 +396,6 @@
         private System.Windows.Forms.TextBox PARAJEBOX;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DateTimePicker FECHA;
+        private System.Windows.Forms.Button LIMPIAR;
     }
 }

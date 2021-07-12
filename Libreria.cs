@@ -187,11 +187,16 @@ namespace Sistema_Oaxaca
                 FECHA.Format = DateTimePickerFormat.Custom;
                 FECHA.CustomFormat = "dd'/'MM'/'yyyy";
                 string a = FECHA.Text;
-                MessageBox.Show(a);
                 DataView dv = new DataView(latabla);
                 dv.RowFilter = "Fecha Like '%" + a + "%'";
                 dataGridView1.DataSource = dv;
             }
+        }
+
+        private void LIMPIAR_Click(object sender, EventArgs e)
+        {
+            DataTable latabla = loadList();
+            dataGridView1.DataSource = latabla;
         }
     }
 }

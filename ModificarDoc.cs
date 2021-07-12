@@ -176,6 +176,7 @@ namespace Sistema_Oaxaca
                     MessageBox.Show("Cedente ya existente");
                     int y = listBox1.FindString(TextoListBox1);
                     listBox1.SetSelected(y, true);
+                    NombreCedente.Text = String.Empty;
                 }
                 else
                 {
@@ -183,6 +184,7 @@ namespace Sistema_Oaxaca
                     Int32.TryParse(listBox1.Items.Count.ToString(), out x);
                     listBox1.Items.Add(TextoListBox1);
                     listBox1.SetSelected(x, true);
+                    NombreCedente.Text = String.Empty;
                 }
 
             }
@@ -220,6 +222,7 @@ namespace Sistema_Oaxaca
                     MessageBox.Show("Cedente ya existente");
                     int y = listBox2.FindString(TextoListBox2);
                     listBox2.SetSelected(y, true);
+                    NombreBeneficiario.Text = String.Empty;
                 }
                 else
                 {
@@ -227,6 +230,7 @@ namespace Sistema_Oaxaca
                     Int32.TryParse(listBox2.Items.Count.ToString(), out x);
                     listBox2.Items.Add(TextoListBox2);
                     listBox2.SetSelected(x, true);
+                    NombreBeneficiario.Text = String.Empty;
                 }
 
             }
@@ -240,6 +244,16 @@ namespace Sistema_Oaxaca
         private void Escanear_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Colonias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 250 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Introduzca solo letras y/o numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
