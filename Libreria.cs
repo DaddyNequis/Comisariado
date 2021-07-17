@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,13 +37,48 @@ namespace Sistema_Oaxaca
             for (int i = 0; i < props.Count; i++)
             {
                 PropertyDescriptor prop = props[i];
-                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+           
+                table.Columns.Add(prop.Name);
             }
             object[] values = new object[props.Count];
             foreach (Terrenos item in terrenos)
             {
-                for (int i = 0; i < values.Length; i++)
-                    values[i] = props[i].GetValue(item) ?? DBNull.Value;
+                for (int i = 0; i < values.Length; i++) {
+                   
+                    if (i == 3 )
+                    {
+
+                        String cedentes = "";
+                        foreach(String cedente in item.Cedentes)
+                        {
+                            cedentes = cedentes + cedente + System.Environment.NewLine;
+                        }
+
+                            values[i] = cedentes.Trim();
+               
+
+
+                    }
+                    else if( i == 4)
+                    {
+
+                        String cedentes = "";
+                        foreach (String cedente in item.Beneficiarios)
+                        {
+                            cedentes = cedentes + cedente + System.Environment.NewLine;
+                        }
+
+                        values[i] = cedentes.Trim();
+
+
+
+                    }
+                    else
+                    {
+
+                        values[i] = props[i].GetValue(item) ?? DBNull.Value;
+                    }
+                }
                 table.Rows.Add(values);
             }
 
@@ -93,7 +129,7 @@ namespace Sistema_Oaxaca
                 dataGridView1.DataSource = latabla;
                 string a = textBox1.Text;
                 DataView dv = new DataView(latabla);
-                dv.RowFilter = "Cedente= '%" + a + "%'";
+                dv.RowFilter = "Cedentes Like '%" + a + "%'";
                 dataGridView1.DataSource = dv;
             }
         }
@@ -135,7 +171,7 @@ namespace Sistema_Oaxaca
                 dataGridView1.DataSource = latabla;
                 string a = BENEFICIARIOBOX.Text;
                 DataView dv = new DataView(latabla);
-                dv.RowFilter = "Beneficiario= '%" + a + "%'";
+                dv.RowFilter = "Beneficiarios Like '%" + a + "%'";
                 dataGridView1.DataSource = dv;
             }
         }
@@ -152,7 +188,7 @@ namespace Sistema_Oaxaca
                 dataGridView1.DataSource = latabla;
                 string a = comboBox1.Text;
                 DataView dv = new DataView(latabla);
-                dv.RowFilter = "Tipo= '%" + a + "%'";
+                dv.RowFilter = "Tipo Like '%" + a + "%'";
                 dataGridView1.DataSource = dv;
             }
         }
